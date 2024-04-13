@@ -1,0 +1,46 @@
+{
+    "sourceFile": "client/src/componants/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1712844102837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712844114578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+//eslint-disable-next-line\r\n+import React from \"react\";\r\n+import { Link } from \"react-router-dom\";\r\n+import { Navbar } from \"flowbite-react\";\r\n+\r\n+export default function Header() {\r\n+    return (\r\n+        <Navbar className=\"border-b-2\">\r\n+                <Link className=\"self-center whitespace-now\">\r\n+                    <span>Neet's</span>Blog\r\n+                </Link>\r\n+        </Navbar>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1712844121151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+//eslint-disable-next-line\r\n+import React from \"react\";\r\n+import { Link } from \"react-router-dom\";\r\n+import { Navbar } from \"flowbite-react\";\r\n+\r\n+export default function Header() {\r\n+    return (\r\n+        <Navbar className=\"border-b-2\">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm\">\r\n+                    <span>Neet's</span>Blog\r\n+                </Link>\r\n+        </Navbar>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1712844126978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+//eslint-disable-next-line\r\n+import React from \"react\";\r\n+import { Link } from \"react-router-dom\";\r\n+import { Navbar } from \"flowbite-react\";\r\n+\r\n+export default function Header() {\r\n+    return (\r\n+        <Navbar className=\"border-b-2\">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm sm:te\">\r\n+                    <span>Neet's</span>Blog\r\n+                </Link>\r\n+        </Navbar>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1712844136886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+//eslint-disable-next-line\r\n+import React from \"react\";\r\n+import { Link } from \"react-router-dom\";\r\n+import { Navbar } from \"flowbite-react\";\r\n+\r\n+export default function Header() {\r\n+    return (\r\n+        <Navbar className=\"border-b-2\">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm sm:text-\">\r\n+                    <span>Neet's</span>Blog\r\n+                </Link>\r\n+        </Navbar>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1712844151617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,66 +5,10 @@\n \r\n export default function Header() {\r\n     return (\r\n         <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whitespace-nowrap text-sm sm:text-\">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm sm:text-xl font\">\r\n                     <span>Neet's</span>Blog\r\n                 </Link>\r\n         </Navbar>\r\n     );\r\n }\r\n-//eslint-disable-next-line\r\n-import React from \"react\";\r\n-import { Link } from \"react-router-dom\";\r\n-import { Navbar } from \"flowbite-react\";\r\n-\r\n-export default function Header() {\r\n-    return (\r\n-        <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whitespace-nowrap text-sm sm:te\">\r\n-                    <span>Neet's</span>Blog\r\n-                </Link>\r\n-        </Navbar>\r\n-    );\r\n-}\r\n-//eslint-disable-next-line\r\n-import React from \"react\";\r\n-import { Link } from \"react-router-dom\";\r\n-import { Navbar } from \"flowbite-react\";\r\n-\r\n-export default function Header() {\r\n-    return (\r\n-        <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whitespace-nowrap text-sm\">\r\n-                    <span>Neet's</span>Blog\r\n-                </Link>\r\n-        </Navbar>\r\n-    );\r\n-}\r\n-//eslint-disable-next-line\r\n-import React from \"react\";\r\n-import { Link } from \"react-router-dom\";\r\n-import { Navbar } from \"flowbite-react\";\r\n-\r\n-export default function Header() {\r\n-    return (\r\n-        <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whitespace-now\">\r\n-                    <span>Neet's</span>Blog\r\n-                </Link>\r\n-        </Navbar>\r\n-    );\r\n-}\r\n-//eslint-disable-next-line\r\n-import React from \"react\";\r\n-import { Link } from \"react-router-dom\";\r\n-import { Navbar } from \"flowbite-react\";\r\n-\r\n-export default function Header() {\r\n-    return (\r\n-        <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whi\">\r\n-                    <span>Neet's</span>Blog\r\n-                </Link>\r\n-        </Navbar>\r\n-    );\r\n-}\r\n"
+                },
+                {
+                    "date": 1712844166071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n export default function Header() {\r\n     return (\r\n         <Navbar className=\"border-b-2\">\r\n-                <Link className=\"self-center whitespace-nowrap text-sm sm:text-xl font-semibold \">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm sm:text-xl font-semibold \"dark>\r\n                     <span>Neet's</span>Blog\r\n                 </Link>\r\n         </Navbar>\r\n     );\r\n"
+                },
+                {
+                    "date": 1712844182274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+//eslint-disable-next-line\r\n+import React from \"react\";\r\n+import { Link } from \"react-router-dom\";\r\n+import { Navbar } from \"flowbite-react\";\r\n+\r\n+export default function Header() {\r\n+    return (\r\n+        <Navbar className=\"border-b-2\">\r\n+                <Link className=\"self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white\">\r\n+                    <span className=\"\">Neet's</span>Blog\r\n+                </Link>\r\n+        </Navbar>\r\n+    );\r\n+}\r\n"
+                }
+            ],
+            "date": 1712844102837,
+            "name": "Commit-0",
+            "content": "//eslint-disable-next-line\r\nimport React from \"react\";\r\nimport { Link } from \"react-router-dom\";\r\nimport { Navbar } from \"flowbite-react\";\r\n\r\nexport default function Header() {\r\n    return (\r\n        <Navbar className=\"border-b-2\">\r\n                <Link className=\"self-center whi\">\r\n                    <span>Neet's</span>Blog\r\n                </Link>\r\n        </Navbar>\r\n    );\r\n}\r\n"
+        }
+    ]
+}
