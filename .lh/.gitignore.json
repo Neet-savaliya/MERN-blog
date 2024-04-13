@@ -1,0 +1,26 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1713024506748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713024512983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+# Logs\n+logs\n+*.log\n+npm-debug.log*\n+yarn-debug.log*\n+yarn-error.log*\n+pnpm-debug.log*\n+lerna-debug.log*\n+\n+node_modules\n+dist\n+dist-ssr\n+*.local\n+\n+# Editor directories and files\n+.vscode/*\n+!.vscode/extensions.json\n+.idea\n+.DS_Store\n+*.suo\n+*.ntvs*\n+*.njsproj\n+*.sln\n+*.sw?\n+.env\n"
+                },
+                {
+                    "date": 1713024521109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+# Logs\n+logs\n+*.log\n+npm-debug.log*\n+yarn-debug.log*\n+yarn-error.log*\n+pnpm-debug.log*\n+lerna-debug.log*\n+\n+node_modules\n+dist\n+dist-ssr\n+*.local\n+\n+# Editor directories and files\n+.vscode/*\n+!.vscode/extensions.json\n+.idea\n+.DS_Store\n+*.suo\n+*.ntvs*\n+*.njsproj\n+*.sln\n+*.sw?\n+\n+.env\n"
+                }
+            ],
+            "date": 1713024506748,
+            "name": "Commit-0",
+            "content": "# Logs\nlogs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\ndist\ndist-ssr\n*.local\n\n# Editor directories and files\n.vscode/*\n!.vscode/extensions.json\n.idea\n.DS_Store\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\n\n"
+        }
+    ]
+}
