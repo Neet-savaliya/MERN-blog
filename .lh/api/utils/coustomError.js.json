@@ -1,0 +1,54 @@
+{
+    "sourceFile": "api/utils/coustomError.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1713451781701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713451788996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-exports.\n\\ No newline at end of file\n+exports.errorHandler\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713451796132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+exports.errorHandler = (status)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713451803125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-exports.errorHandler = (status)\n\\ No newline at end of file\n+exports.errorHandler = (statusCode , message) => {\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452057746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+exports.errorHandler = (statusCode , message) => {\r\n+    const \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452067362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n exports.errorHandler = (statusCode , message) => {\r\n-    const \r\n+    const error = new Error(\"\")\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452074581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+exports.errorHandler = (statusCode , message) => {\r\n+    const error = new Error(massage)\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452079691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+exports.errorHandler = (statusCode , message) => {\r\n+    const error = new Error(massage)\r\n+    const status\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452087150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n exports.errorHandler = (statusCode , message) => {\r\n     const error = new Error(massage)\r\n-    const statusCode = \r\n+    const statusCode = err.statusCode;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713452099779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+exports.errorHandler = (statusCode , message) => {\r\n+    const error = new Error(message)\r\n+    const statusCode = err.statusCode;\r\n+\r\n+    return \r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713451781701,
+            "name": "Commit-0",
+            "content": "exports."
+        }
+    ]
+}
