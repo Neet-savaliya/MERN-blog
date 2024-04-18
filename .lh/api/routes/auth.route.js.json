@@ -1,0 +1,90 @@
+{
+    "sourceFile": "api/routes/auth.route.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1713083989354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713083995859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const express = reuir\n\\ No newline at end of file\n+const express = require(:)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084002669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const express = require(:)\n\\ No newline at end of file\n+const express = require(\"express\")\r\n+\r\n+express\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084014634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require(\"express\")\r\n \r\n-express\n\\ No newline at end of file\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084150648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const express = require(\"express\")\r\n \r\n-const \n\\ No newline at end of file\n+const Router = express.Router\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084317294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n"
+                },
+                {
+                    "date": 1713084326613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n const express = require(\"express\")\r\n \r\n const Router = express.Router()\r\n \r\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router\n\\ No newline at end of file\n+ROuter\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084336930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084347133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n const express = require(\"express\")\r\n \r\n const Router = express.Router()\r\n \r\n-Router.post(\"/\")\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n-ROuter\n\\ No newline at end of file\n+Router.post(\"/sign\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084352408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084361644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084464449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    res.\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084470746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    res.json({})\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713084482432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const express = require(\"express\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    res.json({user})\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713091458089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,9 @@\n const express = require(\"express\")\r\n+const { default: User } = require(\"../models/user.model\")\r\n \r\n const Router = express.Router()\r\n \r\n Router.post(\"/signup\",(req ,res, next) => {\r\n-    res.json({user})\r\n-})\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n-Router.post(\"/signup\",(req ,res, next) => {\r\n-    res.json({})\r\n-})\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n-Router.post(\"/signup\",(req ,res, next) => {\r\n-    res.\r\n-})\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n-Router.post(\"/signup\",(req ,res, next))\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n-Router.post(\"/signup\",)\n-const express = require(\"express\")\r\n-\r\n-const Router = express.Router()\r\n-\r\n\\ No newline at end of file\n-Router.post(\"/sign\")\n+    const {usernam}\r\n+    res.json({User})\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713091466449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const express = require(\"express\")\r\n+const { default: User } = require(\"../models/user.model\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    const {username , }\r\n+    res.json({User})\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713091480183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const express = require(\"express\")\r\n+const { default: User } = require(\"../models/user.model\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    const {username, email, password} = req.body\r\n+    res.json({User})\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713091487299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n const Router = express.Router()\r\n \r\n Router.post(\"/signup\",(req ,res, next) => {\r\n     const {username, email, password} = req.body;\r\n-    res.json({username})\r\n+    res.json({username,})\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713091493019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const express = require(\"express\")\r\n+const { default: User } = require(\"../models/user.model\")\r\n+\r\n+const Router = express.Router()\r\n+\r\n+Router.post(\"/signup\",(req ,res, next) => {\r\n+    const {username, email, password} = req.body;\r\n+    res.json({username, email, password})\r\n+})\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713083989354,
+            "name": "Commit-0",
+            "content": "const express = reuir"
+        }
+    ]
+}

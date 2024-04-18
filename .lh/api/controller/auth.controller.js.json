@@ -1,0 +1,66 @@
+{
+    "sourceFile": "api/controller/auth.controller.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1713270856275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713270870423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n-(req ,res, next) => {\r\n-    const {username, email, password} = req.body;\r\n-    res.json({username, email, password})\n\\ No newline at end of file\n+const User = require(\"../models/user.model.js\")\r\n+\r\n"
+                },
+                {
+                    "date": 1713270876503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n+exports.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713270884433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const User = require(\"../models/user.model.js\")\r\n+\r\n+exports.getSignUp\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713337421669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,3 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n-exports.getSignUp\n-const User = require(\"../models/user.model.js\")\r\n-\r\n-exports.\n\\ No newline at end of file\n+exports.postSignup\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436505834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n-exports.postSignup\n\\ No newline at end of file\n+exports.postSignup()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436512025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n-exports.postSignup()\n\\ No newline at end of file\n+exports.postSignup =\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436524594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n-exports.postSignup =\n\\ No newline at end of file\n+exports.postSignup = (req ,res, next) => {\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436555951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n const User = require(\"../models/user.model.js\")\r\n \r\n exports.postSignup = (req ,res, next) => {\r\n+    console.log(\"called\");\r\n+    const { username, email, password } = req.query;\r\n     \r\n+    const user  = new User({\r\n+        username,email,password\r\n+    })\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436656006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n     \r\n     const user  = new User({\r\n         username,email,password\r\n     })\r\n+\r\n+    user.save().then()\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436663505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     const user  = new User({\r\n         username,email,password\r\n     })\r\n \r\n-    user.save().then()\r\n+    user.save().then().catch()\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436672659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     const user  = new User({\r\n         username,email,password\r\n     })\r\n \r\n-    user.save().then((result) = ).catch()\r\n+    user.save().then((result) =).catch()\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1713436694326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         username,email,password\r\n     })\r\n \r\n     user.save().then((result) => {\r\n-        console.log(res);\r\n+        console.log(resu);\r\n     }).catch()\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713270856275,
+            "name": "Commit-0",
+            "content": "(req ,res, next) => {\r\n    const {username, email, password} = req.body;\r\n    res.json({username, email, password})"
+        }
+    ]
+}
