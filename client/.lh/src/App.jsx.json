@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1718901409248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718901416074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import Project from \"./pages/Project\";\n import SignIn from \"./pages/SignIn\";\n import SignUp from \"./pages/SignUp\";\n import Header from \"./componants/Header\";\n+import { Footer } from \"flowbite-react\";\n \n export default function App() {\n     return (\n         <>\n@@ -22,9 +23,9 @@\n                     <Route path=\"/sign-in\" element = {<SignIn/>}></Route>\n                     <Route path=\"/sign-up\" element = {<SignUp/>}></Route>\n                     \n                 </Routes>\n-                <\n+                <Footer/>\n             </BrowserRouter>\n         </>\n     );\n }\n"
+                },
+                {
+                    "date": 1718901426123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import Project from \"./pages/Project\";\n import SignIn from \"./pages/SignIn\";\n import SignUp from \"./pages/SignUp\";\n import Header from \"./componants/Header\";\n-import \n+import F\n import { Footer } from \"flowbite-react\";\n \n export default function App() {\n     return (\n"
+                },
+                {
+                    "date": 1718903258297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+// eslint-disable-next-line no-unused-vars\n+import React from \"react\";\n+import { BrowserRouter, Routes, Route } from \"react-router-dom\";\n+import Home from \"./pages/Home\";\n+import Dashboard from \"./pages/Dashboard\";\n+import About from \"./pages/About\";\n+import Project from \"./pages/Project\";\n+import SignIn from \"./pages/SignIn\";\n+import SignUp from \"./pages/SignUp\";\n+import Header from \"./componants/Header\";\n+import Footer from \"./componants/Footer\"\n+\n+export default function App() {\n+    return (\n+        <>\n+            <BrowserRouter>\n+            <Header></Header>\n+                <Routes>\n+                    <Route path=\"/\" element={<Home />}></Route>\n+                    <Route path=\"/dashboard\" element = {<Dashboard/>}></Route>\n+                    <Route path=\"/about\" element = {<About/>}></Route>\n+                    <Route path=\"/project\" element = {<Project/>}></Route>\n+                    <Route path=\"/sign-in\" element = {<SignIn/>}></Route>\n+                    <Route path=\"/sign-up\" element = {<SignUp/>}></Route>\n+                    \n+                </Routes>\n+                <FooterCom/>\n+            </BrowserRouter>\n+        </>\n+    );\n+}\n"
+                }
+            ],
+            "date": 1718901409248,
+            "name": "Commit-0",
+            "content": "// eslint-disable-next-line no-unused-vars\nimport React from \"react\";\nimport { BrowserRouter, Routes, Route } from \"react-router-dom\";\nimport Home from \"./pages/Home\";\nimport Dashboard from \"./pages/Dashboard\";\nimport About from \"./pages/About\";\nimport Project from \"./pages/Project\";\nimport SignIn from \"./pages/SignIn\";\nimport SignUp from \"./pages/SignUp\";\nimport Header from \"./componants/Header\";\n\nexport default function App() {\n    return (\n        <>\n            <BrowserRouter>\n            <Header></Header>\n                <Routes>\n                    <Route path=\"/\" element={<Home />}></Route>\n                    <Route path=\"/dashboard\" element = {<Dashboard/>}></Route>\n                    <Route path=\"/about\" element = {<About/>}></Route>\n                    <Route path=\"/project\" element = {<Project/>}></Route>\n                    <Route path=\"/sign-in\" element = {<SignIn/>}></Route>\n                    <Route path=\"/sign-up\" element = {<SignUp/>}></Route>\n                    \n                </Routes>\n                <\n            </BrowserRouter>\n        </>\n    );\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "sourceFile": "client/vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1713512667256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713512675765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,11 @@\n \n // https://vitejs.dev/config/\n export default defineConfig({\n \n-  \n+  server : {\n+    proxy: {\n+      \n+    }\n+  }\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713512685669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export default defineConfig({\n \n   server : {\n     proxy: {\n-      \n+      port\n     }\n   }\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713512693191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { defineConfig } from 'vite'\n+import react from '@vitejs/plugin-react-swc'\n+\n+// https://vitejs.dev/config/\n+export default defineConfig({\n+\n+  server : {\n+    proxy: {\n+      ur\n+    }\n+  }\n+  plugins: [react()],\n+})\n"
+                },
+                {
+                    "date": 1713512699919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,14 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n+import { url } from 'inspector'\n \n // https://vitejs.dev/config/\n export default defineConfig({\n \n   server : {\n     proxy: {\n-      ur\n+      url : \n     }\n   }\n   plugins: [react()],\n })\n-import { defineConfig } from 'vite'\n-import react from '@vitejs/plugin-react-swc'\n-\n-// https://vitejs.dev/config/\n-export default defineConfig({\n-\n-  server : {\n-    proxy: {\n-      port\n-    }\n-  }\n-  plugins: [react()],\n-})\n"
+                },
+                {
+                    "date": 1713512708296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export default defineConfig({\n \n   server : {\n     proxy: {\n-      url : \n+      url : \"localhost:3000\"\n     }\n   }\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713512717900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   server : {\n     proxy: {\n       url : \"localhost:3000\"\n     }\n-  }\n+  },\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713513297244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export default defineConfig({\n \n   server : {\n     proxy: {\n-      url : \"localhost:3000\"\n+      \"/\"\n     }\n   },\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713513312427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n export default defineConfig({\n \n   server : {\n     proxy: {\n-      \"/\"\n+      \"/api\" : {\n+        target : \"http://localhost:3000\"\n+      }\n     }\n   },\n   plugins: [react()],\n })\n"
+                },
+                {
+                    "date": 1713513323247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   server : {\n     proxy: {\n       \"/api\" : {\n         target : \"http://localhost:3000\"\n+        ,secure : false\n       }\n     }\n   },\n   plugins: [react()],\n"
+                },
+                {
+                    "date": 1713513336395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,15 @@\n-import { defineConfig } from 'vite'\n-import react from '@vitejs/plugin-react-swc'\n-import { url } from 'inspector'\n+import { defineConfig } from \"vite\";\n+import react from \"@vitejs/plugin-react-swc\";\n \n // https://vitejs.dev/config/\n export default defineConfig({\n-\n-  server : {\n-    proxy: {\n-      \"/api\" : {\n-        target : \"http://localhost:3000\"\n-        ,secure : false\n-      }\n-    }\n-  },\n-  plugins: [react()],\n-})\n+    server: {\n+        proxy: {\n+            \"/api\": {\n+                target: \"http://localhost:3000\",\n+                secure: false,\n+            },\n+        },\n+    },\n+    plugins: [react()],\n+});\n"
+                },
+                {
+                    "date": 1713513756674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,5 @@\n             },\n         },\n     },\n     plugins: [react()],\n-});\n+});\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713512667256,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react-swc'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n\n  \n  plugins: [react()],\n})\n"
+        }
+    ]
+}

@@ -10,7 +10,15 @@ dotenv.config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin" , "*")
+    res.setHeader("Access-Control-Allow-Method","POST,GET,PUT,DELETE,PATCH")
+    res.setHeader("Access-Control-Allow-Header","Content-Type,Authentication")
+    next()
+})
 
 mongoose
     .connect(process.env.DATABASE_CONNECTION)

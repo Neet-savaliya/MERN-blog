@@ -8,6 +8,7 @@ import Project from "./pages/Project";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Header from "./componants/Header";
+import FooterCom from "./componants/Footer"
 
 export default function App() {
     return (
@@ -23,6 +24,7 @@ export default function App() {
                     <Route path="/sign-up" element = {<SignUp/>}></Route>
                     
                 </Routes>
+                <FooterCom/>
             </BrowserRouter>
         </>
     );

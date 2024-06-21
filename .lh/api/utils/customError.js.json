@@ -1,0 +1,34 @@
+{
+    "sourceFile": "api/utils/customError.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1713513538811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713513544458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n module.exports = (statusCode, message) => {\r\n     const error = new Error(message);\r\n-    const statusCode = err.statusCode;\r\n+    let statusCode = err.statusCode;\r\n     return error;\r\n };\r\n"
+                },
+                {
+                    "date": 1713513557308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n module.exports = (statusCode, message) => {\r\n     const error = new Error(message);\r\n-    let statusCode = err.statusCode;\r\n     return error;\r\n };\r\n"
+                },
+                {
+                    "date": 1713513567215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n module.exports = (statusCode, message) => {\r\n     const error = new Error(message);\r\n-    const \r\n+    const e\r\n     return error;\r\n };\r\n"
+                },
+                {
+                    "date": 1713513581458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+module.exports = (statusCode, message) => {\r\n+    const error = new Error(message);\r\n+    error.statusCode = statusCode;\r\n+    return error;\r\n+};\r\n"
+                }
+            ],
+            "date": 1713513538811,
+            "name": "Commit-0",
+            "content": "module.exports = (statusCode, message) => {\r\n    const error = new Error(message);\r\n    const statusCode = err.statusCode;\r\n    return error;\r\n};\r\n"
+        }
+    ]
+}

@@ -3,7 +3,10 @@ const errorHandler = require("../utils/customError.js");
 const User = require("../models/user.model.js");
 
 exports.postSignup = (req, res, next) => {
-    const { username, email, password } = req.query;
+    console.log(req.body);
+    console.log("called");
+
+    const { username, email, password } = req.body;
 
     if (
         username === "" ||
@@ -15,7 +18,7 @@ exports.postSignup = (req, res, next) => {
     ) {
         next(errorHandler(400,"All field required"));
     }
-
+    
     bcrypt
         .hash(password, 12)
         .then((password) => {

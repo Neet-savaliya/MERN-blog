@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/componants/Footer.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1718901473547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718901480185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default finction Footer\n\\ No newline at end of file\n+export default function Footer()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718901492611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-export default function Footer()\n\\ No newline at end of file\n+export default function Footer(){\r\n+    return(\r\n+        <>\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718901499792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export default function Footer(){\r\n+    return(\r\n+        d\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718903162594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,5 @@\n export default function Footer(){\r\n     return(\r\n-        d\r\n+        <\r\n     )\r\n-}\n-export default function Footer(){\r\n-    return(\r\n-        <>\r\n-        </>\r\n-    )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718903171310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export default function Footer(){\r\n     return(\r\n-        <\r\n+        <Footer\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718903209094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n export default function Footer(){\r\n     return(\r\n         <Footer></Footer>\r\n     )\r\n"
+                },
+                {
+                    "date": 1718903215609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import {Footer}\r\n+export default function Footer(){\r\n+    return(\r\n+        <Footer></Footer>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718901473547,
+            "name": "Commit-0",
+            "content": "export default finction Footer"
+        }
+    ]
+}
