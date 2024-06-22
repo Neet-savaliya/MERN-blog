@@ -4,4 +4,6 @@ const Router = express.Router();
 
 Router.post("/signup", authCtr.postSignup);
 
+Router.post("/login",authCtr.postLogin)
+
 module.exports = Router;
