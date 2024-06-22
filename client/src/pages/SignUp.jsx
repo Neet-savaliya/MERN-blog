@@ -109,7 +109,7 @@ export default function SignUp() {
                 </form>
                 <div className="mt-10">
                     <span>Have an account?</span>
-                    <Link className="text-blue-600 p-3 text-sm">Sign in</Link>
+                    <Link className="text-blue-600 p-3 text-sm" to='/sign-in'>Sign in</Link>
                 </div>
                 {errorMessage && (
                     <Alert color="failure" mt-5>
