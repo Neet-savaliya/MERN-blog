@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/componants/Oauth.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1719137344826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719137350075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export de\n\\ No newline at end of file\n+export default functio\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137357493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default functio\n\\ No newline at end of file\n+export default function Oauth\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137367589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+export default function Oauth(){\r\n+    return \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137375418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export default function Oauth(){\r\n+    return (\r\n+        \"signin\"\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137436179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n export default function Oauth(){\r\n     return (\r\n-        \"signin\"\r\n+        \"Google\"\r\n     )\r\n-}\n-export default function Oauth(){\r\n-    return \r\n-}\n\\ No newline at end of file\n-export default function Oauth\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137442385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n+import { Button } from \"flowbite-react\";\r\n+\r\n export default function Oauth(){\r\n     return (\r\n-        \"Google\"\r\n+        <Button\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137451168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { Button } from \"flowbite-react\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n-        <Button\r\n+        <Button type=\"button\">\r\n+\r\n+        </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137457255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"flowbite-react\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n-        <Button type=\"button\">\r\n+        <Button type=\"button\" outline duo>\r\n \r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137463875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"flowbite-react\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n-        <Button type=\"button\" outline duo>\r\n+        <Button type=\"button\" outline gradientDuoTone={ora}>\r\n \r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137471430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"flowbite-react\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n-        <Button type=\"button\" outline gradientDuoTone={ora}>\r\n+        <Button type=\"button\" outline gradientDuoTone=>\r\n \r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137478257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Button } from \"flowbite-react\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n-        <Button type=\"button\" outline gradientDuoTone=>\r\n+        <Button type=\"button\" outline gradientDuoTone=\"orangeToRed\">\r\n \r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137485328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n export default function Oauth(){\r\n     return (\r\n         <Button type=\"button\" outline gradientDuoTone=\"orangeToRed\">\r\n-\r\n+            \r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137494194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import { Button } from \"flowbite-react\";\r\n+import { AiFillGoogleCircle } from \"react-icons/ai\";\r\n \r\n export default function Oauth(){\r\n     return (\r\n         <Button type=\"button\" outline gradientDuoTone=\"orangeToRed\">\r\n-            <aIfILLgOO\r\n+            <AiFillGoogleCircle\r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719137513230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n export default function Oauth(){\r\n     return (\r\n         <Button type=\"button\" outline gradientDuoTone=\"orangeToRed\">\r\n             <AiFillGoogleCircle/>\r\n-            Contienu \r\n+            Contienu w\r\n         </Button>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1719137344826,
+            "name": "Commit-0",
+            "content": "export de"
+        }
+    ]
+}

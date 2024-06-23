@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/firebase.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1719138249822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719138289914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-  apiKey: \"AIzaSyB-McbZ1IoqmiIOYHmZZchK2ijYuYQsR3c\",\r\n-  authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n-  projectId: \"mern-blog-1b6fe\",\r\n-  storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n-  messagingSenderId: \"911812626115\",\r\n-  appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\"\r\n+    apiKey: \"AIzaSyB-McbZ1IoqmiIOYHmZZchK2ijYuYQsR3c\",\r\n+    authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n+    projectId: \"mern-blog-1b6fe\",\r\n+    storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n\\ No newline at end of file\n+    messagingSenderId: \"911812626115\",\r\n+    appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\",\r\n };\r\n \r\n // Initialize Firebase\r\n-const app = initializeApp(firebaseConfig);\n+export const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1719138331524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: \"AIzaSyB-McbZ1IoqmiIOYHmZZchK2ijYuYQsR3c\",\r\n+    apiKey: ,\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n     appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\",\r\n };\r\n \r\n // Initialize Firebase\r\n\\ No newline at end of file\n-export const app = initializeApp(firebaseConfig);\n+export const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1719138340303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: ,\r\n+    apiKey: meta,\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n     appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\",\r\n };\r\n \r\n // Initialize Firebase\r\n\\ No newline at end of file\n-export const app = initializeApp(firebaseConfig);\n+export const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1719138346915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n     appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\",\r\n };\r\n \r\n // Initialize Firebase\r\n-export const app = initializeApp(firebaseConfig);\n\\ No newline at end of file\n+export const app = initializeApp(firebaseConfig);\r\n"
+                },
+                {
+                    "date": 1719138359899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: meta,\r\n+    apiKey: process.e,\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n"
+                },
+                {
+                    "date": 1719138366537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: process.e,\r\n+    apiKey: process.env.\"AIzaSyB-McbZ1IoqmiIOYHmZZchK2ijYuYQsR3c\",\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n"
+                },
+                {
+                    "date": 1719138372320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: process.env.VITE,\r\n+    apiKey: process.env.VITE_,\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n"
+                },
+                {
+                    "date": 1719138400682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // https://firebase.google.com/docs/web/setup#available-libraries\r\n \r\n // Your web app's Firebase configuration\r\n const firebaseConfig = {\r\n-    apiKey: process.env.VITE_,\r\n+    apiKey: process.env.VITE_GOOGLE_OAUTH_KEY,\r\n     authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n     projectId: \"mern-blog-1b6fe\",\r\n     storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n     messagingSenderId: \"911812626115\",\r\n"
+                }
+            ],
+            "date": 1719138249822,
+            "name": "Commit-0",
+            "content": "// Import the functions you need from the SDKs you need\r\nimport { initializeApp } from \"firebase/app\";\r\n// TODO: Add SDKs for Firebase products that you want to use\r\n// https://firebase.google.com/docs/web/setup#available-libraries\r\n\r\n// Your web app's Firebase configuration\r\nconst firebaseConfig = {\r\n  apiKey: \"AIzaSyB-McbZ1IoqmiIOYHmZZchK2ijYuYQsR3c\",\r\n  authDomain: \"mern-blog-1b6fe.firebaseapp.com\",\r\n  projectId: \"mern-blog-1b6fe\",\r\n  storageBucket: \"mern-blog-1b6fe.appspot.com\",\r\n  messagingSenderId: \"911812626115\",\r\n  appId: \"1:911812626115:web:23b3e0ae0ea732e8dac476\"\r\n};\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);"
+        }
+    ]
+}

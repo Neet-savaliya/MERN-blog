@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1719030416847,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719137403791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,12 +105,13 @@\n                         ) : (\r\n                             \"Sign Up\"\r\n                         )}\r\n                     </Button>\r\n+                    <Oauth/>\r\n                 </form>\r\n                 <div className=\"mt-10\">\r\n                     <span>Have an account?</span>\r\n-                    <Link className=\"text-blue-600 p-3 text-sm\" to=>Sign in</Link>\r\n+                    <Link className=\"text-blue-600 p-3 text-sm\" to='/sign-in'>Sign in</Link>\r\n                 </div>\r\n                 {errorMessage && (\r\n                     <Alert color=\"failure\" mt-5>\r\n                         {errorMessage}\r\n"
+                },
+                {
+                    "date": 1719137409570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n // eslint-disable-next-line no-unused-vars\r\n import React, { useState } from \"react\";\r\n import { Link,useNavigate } from \"react-router-dom\";\r\n import { TextInput, Label, Button, Alert, Spinner } from \"flowbite-react\";\r\n+import Oauth from \"../componants/Oauth\";\r\n \r\n export default function SignUp() {\r\n     const [inputText, setInputText] = useState({});\r\n     const [errorMessage, setErrorMessage] = useState(null);\r\n@@ -105,9 +106,9 @@\n                         ) : (\r\n                             \"Sign Up\"\r\n                         )}\r\n                     </Button>\r\n-                    <Oauth/>\r\n+                    <Oauthth/>\r\n                 </form>\r\n                 <div className=\"mt-10\">\r\n                     <span>Have an account?</span>\r\n                     <Link className=\"text-blue-600 p-3 text-sm\" to='/sign-in'>Sign in</Link>\r\n"
                 }
             ],
             "date": 1719030416847,
