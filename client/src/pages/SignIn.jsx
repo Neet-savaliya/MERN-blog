@@ -1,29 +1,33 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TextInput, Label, Button, Alert, Spinner } from "flowbite-react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    signInStart,
+    signInSuccess,
+    signInFail,
+} from "../redux/user/userSlice";
 
 export default function SignIn() {
     const [inputText, setInputText] = useState({});
-    const [errorMessage, setErrorMessage] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const navigate = useNavigate()
+    const {loading , error : errorMessage} = useSelector(state => state.user)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     function changeHandler(e) {
         setInputText({ ...inputText, [e.target.id]: e.target.value });
     }
-
+    
     async function postToSignUp(e) {
         e.preventDefault();
 
         if (!inputText.email || !inputText.password) {
-            setLoading(false);
-            setErrorMessage("Please enter all the fields.");
+            dispatch(signInFail("Please enter all the fields."))
         }
         console.log(JSON.stringify(inputText));
         try {
-            setLoading(true);
-            setErrorMessage(false);
+            dispatch(signInStart());
             const res = await fetch("/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -32,18 +36,16 @@ export default function SignIn() {
             });
 
             const data = await res.json();
-            console.log("data success" , data.success);
-            if(res.ok){
-                navigate("/")
+            console.log("data success", data.success);
+            if (res.ok) {
+                dispatch(signInSuccess(data));
+                navigate("/");
             }
             if (data.success === false) {
-                setLoading(false);
-                return setErrorMessage(data.message);
+                dispatch(signInFail(data.message));
             }
-            setLoading(false);
         } catch (err) {
-            setLoading(false);
-            setErrorMessage(err);
+            dispatch(signInFail(err));
         }
     }
 
@@ -100,7 +102,9 @@ export default function SignIn() {
                 </form>
                 <div className="mt-10">
                     <span>Do not Have an account?</span>
-                    <Link className="text-blue-600 p-3 text-sm" to="/sign-up">Sign up</Link>
+                    <Link className="text-blue-600 p-3 text-sm" to="/sign-up">
+                        Sign up
+                    </Link>
                 </div>
                 {errorMessage && (
                     <Alert color="failure" mt-5>
