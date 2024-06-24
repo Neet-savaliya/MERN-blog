@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/redux/theme/themeSlice.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1719210115358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719210121321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import \n\\ No newline at end of file\n+import createSl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719210137079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialSa\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719210146188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719210152261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719210157823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719210167849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1719210175100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,25 +3,6 @@\n const initialState = {\r\n     theme : \"light\"\r\n }\r\n \r\n+co\r\n \r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme\r\n-}\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialSa\n\\ No newline at end of file\n-import createSl\n"
+                },
+                {
+                    "date": 1719210187659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n const initialState = {\r\n     theme : \"light\"\r\n }\r\n \r\n-co\r\n+const themeSlice = \r\n \r\n"
+                },
+                {
+                    "date": 1719210198559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    \r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210207931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    \r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210213698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        \r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210221714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        themeTogge\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210231366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210254649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (theme) => {\r\n+\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210282850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (theme) => {\r\n+            if()\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210287993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (theme) => {\r\n+            \r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210295315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,108 +13,4 @@\n         }\r\n     }\r\n })\r\n \r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (theme) => {\r\n-            if()\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (theme) => {\r\n-\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        themeTogge\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        \r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    \r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    \r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = \r\n-\r\n"
+                },
+                {
+                    "date": 1719210333712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (this.state.first) => {\r\n+            \r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210343515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = theme\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210349399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = sa\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210360940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme ? \"\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210367565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n"
+                },
+                {
+                    "date": 1719210374977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     name:\"theme\",\r\n     initialState,\r\n     reducers:{\r\n         toggleTheme : (state) => {\r\n-            state.theme = state.theme == \"light\"? \"\"\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n         }\r\n     }\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1719210384970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,84 +13,6 @@\n         }\r\n     }\r\n })\r\n \r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n+const export\r\n \r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (state) => {\r\n-            state.theme = state.theme ? \"\"\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (state) => {\r\n-            state.theme = sa\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (state) => {\r\n-            state.theme = theme\r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (this.state.first) => {\r\n-            \r\n-        }\r\n-    }\r\n-})\r\n-\r\n-import { createSlice } from \"@reduxjs/toolkit\";\r\n-\r\n-const initialState = {\r\n-    theme : \"light\"\r\n-}\r\n-\r\n-const themeSlice = createSlice({\r\n-    name:\"theme\",\r\n-    initialState,\r\n-    reducers:{\r\n-        toggleTheme : (theme) => {\r\n-            \r\n-        }\r\n-    }\r\n-})\r\n-\r\n"
+                },
+                {
+                    "date": 1719210392551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export theme\r\n+\r\n"
+                },
+                {
+                    "date": 1719210397873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export themeSlice\r\n+\r\n"
+                },
+                {
+                    "date": 1719210405578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export const themeSlice = themeSlice\r\n+\r\n"
+                },
+                {
+                    "date": 1719210416002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+export const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export const themeSlice = themeSlice\r\n+\r\n"
+                },
+                {
+                    "date": 1719210426491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n         }\r\n     }\r\n })\r\n \r\n+export \r\n \r\n-\r\n"
+                },
+                {
+                    "date": 1719210436055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\r\n+\r\n+const initialState = {\r\n+    theme : \"light\"\r\n+}\r\n+\r\n+export const themeSlice = createSlice({\r\n+    name:\"theme\",\r\n+    initialState,\r\n+    reducers:{\r\n+        toggleTheme : (state) => {\r\n+            state.theme = state.theme == \"light\"? \"dark\" : \"light\"\r\n+        }\r\n+    }\r\n+})\r\n+\r\n+export const {}\r\n+\r\n"
+                }
+            ],
+            "date": 1719210115358,
+            "name": "Commit-0",
+            "content": "import "
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/componants/Theme.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1719210532519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719210541578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n export default function Theme() {\r\n   return (\r\n-    <div>Theme</div>\r\n+    <div></div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719210549996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import React from 'react'\r\n+\r\n+export default function Theme(childeren) {\r\n+  return (\r\n+    <div></div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210557551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import React from 'react'\r\n+\r\n+export default function Theme(childeren) {\r\n+  return (\r\n+    <div>{childeren}</div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210564880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import React from 'react'\r\n+\r\n+export default function Theme(children) {\r\n+  return (\r\n+    <div>{children}</div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210581761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import\r\n \r\n export default function Theme(children) {\r\n   return (\r\n     <div>{children}</div>\r\n"
+                },
+                {
+                    "date": 1719210607974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import\r\n+\r\n+export default function Theme(children) {\r\n+  return (\r\n+    \r\n+    <div>{children}</div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210623201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,9 @@\n import\r\n \r\n export default function Theme(children) {\r\n   return (\r\n-    \r\n+    <div>\r\n+    </div>\r\n     <div>{children}</div>\r\n   )\r\n }\r\n-import\r\n-\r\n-export default function Theme(children) {\r\n-  return (\r\n-    <div>{children}</div>\r\n-  )\r\n-}\r\n-import React from 'react'\r\n-\r\n-export default function Theme(childeren) {\r\n-  return (\r\n-    <div>{childeren}</div>\r\n-  )\r\n-}\r\n-import React from 'react'\r\n-\r\n-export default function Theme(childeren) {\r\n-  return (\r\n-    <div></div>\r\n-  )\r\n-}\r\n-import React from 'react'\r\n-\r\n-export default function Theme() {\r\n-  return (\r\n-    <div></div>\r\n-  )\r\n-}\r\n"
+                },
+                {
+                    "date": 1719210632594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-import\r\n+import {use}\r\n \r\n export default function Theme(children) {\r\n   return (\r\n     <div>\r\n+    <div>{children}</div>\r\n     </div>\r\n-    <div>{children}</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719210642760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function Theme(children) {\r\n+    const theme = \r\n+  return (\r\n+    <div>\r\n+    <div>{children}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210648923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function Theme(children) {\r\n+    const theme = useSelector(state)\r\n+  return (\r\n+    <div>\r\n+    <div>{children}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210660578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function Theme(children) {\r\n+    const theme = useSelector(state => state)\r\n+  return (\r\n+    <div>\r\n+    <div>{children}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210670711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function Theme(children) {\r\n+    const theme = useSelector(state => state.theme)\r\n+  return (\r\n+    \r\n+    <div>\r\n+    <div>{children}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719210678588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default function Theme(children) {\r\n     const theme = useSelector(state => state.theme)\r\n   return (\r\n \r\n-    <div className=\"\">\r\n+    <div className={theme}>\r\n     <div>{children}</div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719210698260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function Theme(children) {\r\n+    const theme = useSelector(state => state.theme)\r\n+  return (\r\n+\r\n+    <div className={theme}>\r\n+    <div className=\"bg-white text-gray-700 \">{children}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1719210532519,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function Theme() {\r\n  return (\r\n    <div>Theme</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
