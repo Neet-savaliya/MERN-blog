@@ -74,7 +74,6 @@ exports.postGoogleSignup = (req, res, next) => {
     User.findOne({ email: email })
         .then((user) => {
             if (user) {
-                console.log("running 1");
                 const token = jwt.sign(
                     { id: user._id },
                     process.env.JWT_SECRET
@@ -82,7 +81,6 @@ exports.postGoogleSignup = (req, res, next) => {
                 const { password: pass, ...rest } = user._doc;
                 return res.status(200).cookie("token", token).json(rest);
             } else {
-                console.log("running 2");
                 const randomPass =
                     Math.random().toString(36).slice(-8) +
                     Math.random().toString(36).slice(-8);
@@ -90,7 +88,6 @@ exports.postGoogleSignup = (req, res, next) => {
             }
         })
         .then((saltedPass) => {
-            console.log("running 3");
             const user = new User({
                 username:
                     name.toLowerCase().split(" ").join("") +
@@ -103,7 +100,6 @@ exports.postGoogleSignup = (req, res, next) => {
             return user.save();
         })
         .then((user) => {
-            console.log("running 4");
             if (user) {
                 console.log(user);
                 const token = jwt.sign(
