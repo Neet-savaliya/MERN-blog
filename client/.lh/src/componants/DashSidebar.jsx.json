@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/componants/DashSidebar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1719377272492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719377436999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import React from 'react'\r\n \r\n+\r\n export default function DashSidebar() {\r\n   return (\r\n     <div>DashSidebar</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1719377444258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n \r\n export default function DashSidebar() {\r\n   return (\r\n-    <div>DashSidebar</div>\r\n+    \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719377451169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n+import { Sidebar } from \"flowbite-react\";\r\n \r\n \r\n export default function DashSidebar() {\r\n   return (\r\n-    \r\n+    <Sidebar\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719377456538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n \r\n \r\n export default function DashSidebar() {\r\n   return (\r\n-    <Sidebar\r\n+    <Sidebar>\r\n+        <\r\n+    </Sidebar>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719377461666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \r\n export default function DashSidebar() {\r\n   return (\r\n     <Sidebar>\r\n-        <\r\n+        <SIdebarI\r\n     </Sidebar>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719377467585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n-import { Sidebar } from \"flowbite-react\";\r\n+import { Sidebar, SidebarItems } from \"flowbite-react\";\r\n \r\n \r\n export default function DashSidebar() {\r\n   return (\r\n     <Sidebar>\r\n-        <SIdebarI\r\n+        <SidebarItems>\r\n+            <SO\r\n+        </SidebarItems>\r\n     </Sidebar>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719377473759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { Sidebar, SidebarItems } from \"flowbite-react\";\r\n+\r\n+\r\n+export default function DashSidebar() {\r\n+  return (\r\n+    <Sidebar>\r\n+        <SidebarItems>\r\n+            <SidebarI\r\n+        </SidebarItems>\r\n+    </Sidebar>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1719377480505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <Sidebar>\r\n         <SidebarItems>\r\n             <SidebarItemGroup>\r\n-                Sidebar\r\n+                Sideba\r\n             </SidebarItemGroup>\r\n         </SidebarItems>\r\n     </Sidebar>\r\n   )\r\n"
+                },
+                {
+                    "date": 1719377648983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n             <SidebarItemGroup>\r\n                 <SidebarItem icon = {FaUser} active label={\"user\"} labelColor = \"dark\">\r\n                     Profile\r\n                 </SidebarItem>\r\n-                <SidebarItem icon = {FaArrow} active label={\"user\"} labelColor = \"dark\">\r\n+                <SidebarItem icon = {FaArro} active label={\"user\"} labelColor = \"dark\">\r\n                     Profile\r\n                 </SidebarItem>\r\n             </SidebarItemGroup>\r\n         </SidebarItems>\r\n"
+                }
+            ],
+            "date": 1719377272492,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function DashSidebar() {\r\n  return (\r\n    <div>DashSidebar</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

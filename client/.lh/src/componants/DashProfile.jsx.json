@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/componants/DashProfile.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1719377260463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719377432800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import React from 'react'\r\n \r\n+\r\n export default function DashProfile() {\r\n   return (\r\n     <div>DashProfile</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1719421908044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n \r\n \r\n export default function DashProfile() {\r\n   return (\r\n-    <div>DashProfile</div>\r\n+    <div>\r\n+      \r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719421915178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n export default function DashProfile() {\r\n   return (\r\n     <div>\r\n+      <h1>Profile</h1>\r\n       \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719421922303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export default function DashProfile() {\r\n   return (\r\n     <div>\r\n       <h1>Profile</h1>\r\n-      \r\n+\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719421928915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export default function DashProfile() {\r\n   return (\r\n     <div>\r\n       <h1>Profile</h1>\r\n-      form\r\n+      <form action=\"\"></form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1719421955593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import \r\n+\r\n+export default function DashProfile() {\r\n+  return (\r\n+    <div>\r\n+      <h1>Profile</h1>\r\n+      <form>\r\n+        <img src={} alt=\"user\" />\r\n+      </form>\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1719377260463,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function DashProfile() {\r\n  return (\r\n    <div>DashProfile</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
