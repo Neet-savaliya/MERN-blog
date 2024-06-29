@@ -28,6 +28,7 @@ export default function DashSidebar() {
                             active={tab === "profile"}
                             label={"user"}
                             labelColor="dark"
+                            as="div"
                         >
                             Profile
                         </SidebarItem>
