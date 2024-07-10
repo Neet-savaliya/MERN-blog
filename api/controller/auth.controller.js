@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const errorHandler = require("../utils/customError.js");
 const User = require("../models/user.model.js");
 const jwt = require("jsonwebtoken");
-const { rmSync } = require("fs");
+const { getPriority } = require("os");
 
 exports.postSignup = (req, res, next) => {
     console.log(req.body);
@@ -56,10 +56,11 @@ exports.postLogin = (req, res, next) => {
                         process.env.JWT_SECRET
                     );
                     const { password: pass, ...rest } = user._doc;
+                    // window.localStorage.setItem("access_token", token);
                     return res
                         .status(200)
-                        .cookie("access_token", token)
-                        .json(rest);
+                        .cookie("access_token", token, { httpOnly: true })
+                        .json({rest, token});
                 } else {
                     return next(errorHandler(400, "Password is invalid."));
                 }
@@ -79,7 +80,11 @@ exports.postGoogleSignup = (req, res, next) => {
                     process.env.JWT_SECRET
                 );
                 const { password: pass, ...rest } = user._doc;
-                return res.status(200).cookie("token", token).json(rest);
+                // window.localStorage.setItem("access_token", token);
+                return res
+                    .status(200)
+                    .cookie("access_token", token, { httpOnly: true })
+                    .json(rest);
             } else {
                 const randomPass =
                     Math.random().toString(36).slice(-8) +
@@ -107,8 +112,12 @@ exports.postGoogleSignup = (req, res, next) => {
                     process.env.JWT_SECRET
                 );
                 console.log(user);
-                const {password : pass , ...rest} = user._doc;
-                return res.status(200).cookie("token", token).json(rest);
+                const { password: pass, ...rest } = user._doc;
+                // window.localStorage.setItem("access_token", token);
+                return res
+                    .status(200)
+                    .cookie("access_token", token, { httpOnly: true })
+                    .json(rest);
             }
         })
         .catch((err) => next(err));

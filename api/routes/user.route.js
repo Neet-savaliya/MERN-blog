@@ -1,8 +1,11 @@
-const express = require("express")
-const userCtr = require("../controller/user.controller")
+const express = require("express");
+const userCtr = require("../controller/user.controller");
+const {tokenVerify} = require("../utils/tokenVerify");
 
-const Router = express.Router()
+const Router = express.Router();
 
-Router.get("/test" , userCtr.getTestRout)
+Router.get("/test", userCtr.getTestRout);
 
-module.exports = Router
+Router.put("/update/:userId", tokenVerify, userCtr.putUpdate);
+
+module.exports = Router;

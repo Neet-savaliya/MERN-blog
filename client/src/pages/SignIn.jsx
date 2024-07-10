@@ -12,19 +12,19 @@ import Oauth from "../componants/Oauth";
 
 export default function SignIn() {
     const [inputText, setInputText] = useState({});
-    const {loading , error : errorMessage} = useSelector(state => state.user)
+    const { loading, error: errorMessage } = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     function changeHandler(e) {
         setInputText({ ...inputText, [e.target.id]: e.target.value });
     }
-    
+
     async function postToSignUp(e) {
         e.preventDefault();
 
         if (!inputText.email || !inputText.password) {
-            dispatch(signInFail("Please enter all the fields."))
+            dispatch(signInFail("Please enter all the fields."));
         }
         console.log(JSON.stringify(inputText));
         try {
@@ -37,9 +37,26 @@ export default function SignIn() {
             });
 
             const data = await res.json();
+            console.log("data with token :",data);
             console.log("data success", data.success);
             if (res.ok) {
-                dispatch(signInSuccess(data));
+                dispatch(
+                    signInSuccess({
+                        username: "user1",
+                        email: "user1@gmail.com",
+                        password:
+                            "$2a$12$ynwNXYO9ovs9/KJb2bQleuNQd3XxWe91Zv6YTpvyzeceGpiWPhX0i",
+                        profilePicture:
+                            "https://media.istockphoto.com/id/610003972/vector/vector-businessman-black-silhouette-isolated.jpg?s=612x612&w=0&k=20&c=Iu6j0zFZBkswfq8VLVW8XmTLLxTLM63bfvI6uXdkacM=",
+                        createdAt: {
+                            $date: "2024-06-23T14:43:14.187Z",
+                        },
+                        updatedAt: {
+                            $date: "2024-06-23T14:43:14.187Z",
+                        },
+                        __v: 0,
+                    })
+                );
                 navigate("/");
             }
             if (data.success === false) {
@@ -100,7 +117,7 @@ export default function SignIn() {
                             "Sign Up"
                         )}
                     </Button>
-                    <Oauth/>
+                    <Oauth />
                 </form>
                 <div className="mt-10">
                     <span>Do not Have an account?</span>

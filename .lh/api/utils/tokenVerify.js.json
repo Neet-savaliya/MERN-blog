@@ -1,0 +1,118 @@
+{
+    "sourceFile": "api/utils/tokenVerify.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1719630804941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719630811387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const \n\\ No newline at end of file\n+const jwt = require(\r\n+    \"\"\r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719630816809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,1 @@\n-const jwt = require(\r\n-    \"\"\r\n-)\n\\ No newline at end of file\n+const jwt = require(\"jsonwebtoken\");\r\n"
+                },
+                {
+                    "date": 1719630823791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1719630830520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+const \r\n"
+                },
+                {
+                    "date": 1719630844811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,3 @@\n const jwt = require(\"jsonwebtoken\");\r\n \r\n-const \r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-\r\n-const jwt = require(\"jsonwebtoken\");\r\n+exports.tokenVerufy\r\n"
+                },
+                {
+                    "date": 1719630850330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify\r\n"
+                },
+                {
+                    "date": 1719630860749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) =\r\n"
+                },
+                {
+                    "date": 1719630873220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = cookie\r\n+}\r\n"
+                },
+                {
+                    "date": 1719630879302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const jwt = require(\"jsonwebtoken\");\r\n \r\n exports.tokenVerify = (req, res, next) => {\r\n-    const token = cookie\r\n+    const token = req.\r\n }\r\n"
+                },
+                {
+                    "date": 1719630887086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const jwt = require(\"jsonwebtoken\");\r\n \r\n exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.\r\n+    const token = req.cookie.token\r\n }\r\n"
+                },
+                {
+                    "date": 1719630917669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token\r\n+}\r\n"
+                },
+                {
+                    "date": 1719630926043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify()\r\n+}\r\n"
+                },
+                {
+                    "date": 1719630931649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,)\r\n+}\r\n"
+                },
+                {
+                    "date": 1719630938829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,32 +2,6 @@\n \r\n exports.tokenVerify = (req, res, next) => {\r\n     const token = req.cookie.access_token;\r\n \r\n-    jwt.verify(token,)\r\n+    jwt.verify(token,process.env)\r\n }\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token;\r\n-\r\n-    jwt.verify()\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.token\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) =\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerufy\r\n"
+                },
+                {
+                    "date": 1719630959613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET)\r\n+}\r\n"
+                },
+                {
+                    "date": 1719630984810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET,)\r\n+}\r\n"
+                },
+                {
+                    "date": 1719631022634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET)\r\n+}\r\n"
+                },
+                {
+                    "date": 1719631033692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET).then\r\n+}\r\n"
+                },
+                {
+                    "date": 1719631039943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n exports.tokenVerify = (req, res, next) => {\r\n     const token = req.cookie.access_token;\r\n \r\n-    jwt.verify(token,process.env.JWT_SECRET).then\r\n+    jwt.verify(token,process.env.JWT_SECRET)\r\n }\r\n"
+                },
+                {
+                    "date": 1719631246887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,34 +2,6 @@\n \r\n exports.tokenVerify = (req, res, next) => {\r\n     const token = req.cookie.access_token;\r\n \r\n-    jwt.verify(token,process.env.JWT_SECRET)\r\n+    jwt.verify(token,process.env.JWT_SECRET,())\r\n }\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token;\r\n-\r\n-    jwt.verify(token,process.env.JWT_SECRET)\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token;\r\n-\r\n-    jwt.verify(token,process.env.JWT_SECRET,)\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token;\r\n-\r\n-    jwt.verify(token,process.env.JWT_SECRET)\r\n-}\r\n-const jwt = require(\"jsonwebtoken\");\r\n-\r\n-exports.tokenVerify = (req, res, next) => {\r\n-    const token = req.cookie.access_token;\r\n-\r\n-    jwt.verify(token,process.env)\r\n-}\r\n"
+                },
+                {
+                    "date": 1719631255932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET,(compltere))\r\n+}\r\n"
+                },
+                {
+                    "date": 1719631269787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = req.cookie.access_token;\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET,(complte) => {\r\n+        console.log(complte);\r\n+    })\r\n+}\r\n"
+                },
+                {
+                    "date": 1719631275649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n exports.tokenVerify = (req, res, next) => {\r\n     const token = req.cookie.access_token;\r\n \r\n     jwt.verify(token,process.env.JWT_SECRET,(complte) => {\r\n-        console.log(complte);\r\n+        console.log(complet);\r\n     })\r\n }\r\n"
+                },
+                {
+                    "date": 1719631532339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,6 @@\n \r\n     jwt.verify(token,process.env.JWT_SECRET,(complte) => {\r\n         console.log(complte);\r\n     })\r\n+    next();\r\n }\r\n"
+                },
+                {
+                    "date": 1719679086212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+const jwt = require(\"jsonwebtoken\");\r\n+\r\n+exports.tokenVerify = (req, res, next) => {\r\n+    const token = res.cookie.access_token;\r\n+    const userId = req.params.userId\r\n+    const {use}\r\n+\r\n+    jwt.verify(token,process.env.JWT_SECRET,(data) => {\r\n+        if(data.id === userId){\r\n+\r\n+        }\r\n+    })\r\n+    next();\r\n+}\r\n"
+                }
+            ],
+            "date": 1719630804941,
+            "name": "Commit-0",
+            "content": "const "
+        }
+    ]
+}
