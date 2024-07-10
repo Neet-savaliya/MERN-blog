@@ -47,7 +47,18 @@ exports.putUpdate = (req, res, next) => {
     )
         .then((user) => {
             const { password, ...rest } = user._doc;
-            return res.status(200).json(rest)
+            return res.status(200).json(rest);
         })
         .catch((err) => next(err));
+};
+
+exports.deleteAccount = async (req, res, next) => {
+    const { userId } = req.params;
+    try {
+        await User.findByIdAndDelete(userId);
+        const data = await res;
+        res.status(200).json(data);
+    } catch (error) {
+        next(error);
+    }
 };

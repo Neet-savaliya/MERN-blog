@@ -6,7 +6,7 @@ module.exports.tokenVerify = (req, res, next) => {
     
     // const userId = req.params.userId;
 
-    console.log(token ,process.env.JWT_SECRET);
+    // console.log(token ,process.env.JWT_SECRET);
 
     // jwt.verify(token, process.env.JWT_SECRET, (err,data) => {
     //     console.log(data , userId);

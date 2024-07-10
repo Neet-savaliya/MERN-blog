@@ -37,26 +37,11 @@ export default function SignIn() {
             });
 
             const data = await res.json();
-            console.log("data with token :",data);
-            console.log("data success", data.success);
+            console.log("data with token :", data);
+            const { rest } = data;
+            console.log(rest);
             if (res.ok) {
-                dispatch(
-                    signInSuccess({
-                        username: "user1",
-                        email: "user1@gmail.com",
-                        password:
-                            "$2a$12$ynwNXYO9ovs9/KJb2bQleuNQd3XxWe91Zv6YTpvyzeceGpiWPhX0i",
-                        profilePicture:
-                            "https://media.istockphoto.com/id/610003972/vector/vector-businessman-black-silhouette-isolated.jpg?s=612x612&w=0&k=20&c=Iu6j0zFZBkswfq8VLVW8XmTLLxTLM63bfvI6uXdkacM=",
-                        createdAt: {
-                            $date: "2024-06-23T14:43:14.187Z",
-                        },
-                        updatedAt: {
-                            $date: "2024-06-23T14:43:14.187Z",
-                        },
-                        __v: 0,
-                    })
-                );
+                dispatch(signInSuccess(rest));
                 navigate("/");
             }
             if (data.success === false) {

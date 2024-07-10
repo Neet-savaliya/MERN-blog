@@ -24,7 +24,7 @@ export default function DashProfile() {
     const [imageUploadError, setImageUploadError] = useState(null);
     const [formData, setFormData] = useState({});
     const [imageUploading, setImageUploading] = useState(false)
-    const [updateStatus,setUpdateStatus] = useState({});
+    const [updateStatus,setUpdateStatus] = useState(null);
     const imagePickerRef = useRef();
     const dispatch = useDispatch();
 
