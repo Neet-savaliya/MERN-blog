@@ -52,7 +52,7 @@ exports.postLogin = (req, res, next) => {
             bcrypt.compare(password, user.password).then((validPass) => {
                 if (validPass) {
                     const token = jwt.sign(
-                        { id: user._id },
+                        { id: user._id, admin: user.admin },
                         process.env.JWT_SECRET
                     );
                     const { password: pass, ...rest } = user._doc;
@@ -60,7 +60,7 @@ exports.postLogin = (req, res, next) => {
                     return res
                         .status(200)
                         .cookie("access_token", token, { httpOnly: true })
-                        .json({rest, token});
+                        .json({ rest, token });
                 } else {
                     return next(errorHandler(400, "Password is invalid."));
                 }
@@ -76,7 +76,7 @@ exports.postGoogleSignup = (req, res, next) => {
         .then((user) => {
             if (user) {
                 const token = jwt.sign(
-                    { id: user._id },
+                    { id: user._id, admin: user.admin },
                     process.env.JWT_SECRET
                 );
                 const { password: pass, ...rest } = user._doc;
@@ -108,7 +108,7 @@ exports.postGoogleSignup = (req, res, next) => {
             if (user) {
                 console.log(user);
                 const token = jwt.sign(
-                    { id: user._id },
+                    { id: user._id, admin: user.admin },
                     process.env.JWT_SECRET
                 );
                 console.log(user);
