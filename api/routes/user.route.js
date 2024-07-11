@@ -10,4 +10,6 @@ Router.put("/update/:userId", tokenVerify, userCtr.putUpdate);
 
 Router.delete("/delete/:userId", tokenVerify, userCtr.deleteAccount);
 
+Router.post("/sign-out",userCtr.postSignOut);
+
 module.exports = Router;

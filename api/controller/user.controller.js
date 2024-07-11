@@ -61,3 +61,13 @@ exports.deleteAccount = async (req, res, next) => {
         next(error);
     }
 };
+
+exports.postSignOut = (req, res, next) => {
+    try {
+        res.status(200)
+            .clearCookie("access_token")
+            .json("User sign out successful");
+    } catch (error) {
+        next(error);
+    }
+};

@@ -24,6 +24,7 @@ import {
     deleteStart,
     deleteSuccess,
     deleteFail,
+    signOutSuccess,
 } from "../redux/user/userSlice";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -130,9 +131,12 @@ export default function DashProfile() {
         setShowModel(false);
         try {
             dispatch(deleteStart());
-            const res = await fetch(`api/user/delete/${currentUser.payload._id}`, {
-                method: "DELETE",
-            });
+            const res = await fetch(
+                `api/user/delete/${currentUser.payload._id}`,
+                {
+                    method: "DELETE",
+                }
+            );
             const data = await res.json();
             if (!res.ok) {
                 dispatch(deleteFail(data.message));
@@ -141,6 +145,22 @@ export default function DashProfile() {
             }
         } catch (error) {
             dispatch(deleteFail());
+        }
+    };
+
+    const handleSignOut = async() => {
+        try {
+            const res = await fetch("http://localhost:3000/api/user/sign-out", {
+                method: "POST",
+            });
+            const data = await res.json();
+            if(!res.ok){
+                console.log(data.message);
+            }else{
+                dispatch(signOutSuccess());
+            }
+        } catch (error) {
+            console.log(error);
         }
     };
     return (
@@ -232,7 +252,9 @@ export default function DashProfile() {
                     >
                         Delete Account
                     </span>
-                    <span className=" cursor-pointer ">Sign Out</span>
+                    <span className=" cursor-pointer \" onClick={handleSignOut}>
+                        Sign Out
+                    </span>
                 </div>
             </form>
 
@@ -256,9 +278,7 @@ export default function DashProfile() {
                 <ModalHeader />
                 <ModalBody>
                     <div className="text-center">
-                        <HiOutlineExclamationCircle
-                            className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto"
-                        />
+                        <HiOutlineExclamationCircle className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto" />
                         <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
                             Are you sure you want to delete your account?
                         </h3>
