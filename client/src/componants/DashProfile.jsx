@@ -1,4 +1,11 @@
-import { Alert, Button, TextInput } from "flowbite-react";
+import {
+    Alert,
+    Button,
+    Modal,
+    ModalBody,
+    ModalHeader,
+    TextInput,
+} from "flowbite-react";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -9,10 +16,14 @@ import {
 } from "firebase/storage";
 import { app } from "../firebase";
 import { CircularProgressbar } from "react-circular-progressbar";
+import { HiOutlineExclamationCircle } from "react-icons/hi2";
 import {
     submitStart,
     submitSuccess,
     submitFail,
+    deleteStart,
+    deleteSuccess,
+    deleteFail,
 } from "../redux/user/userSlice";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -23,8 +34,9 @@ export default function DashProfile() {
     const [imageUploadProgress, setImageUploadProgress] = useState(null);
     const [imageUploadError, setImageUploadError] = useState(null);
     const [formData, setFormData] = useState({});
-    const [imageUploading, setImageUploading] = useState(false)
-    const [updateStatus,setUpdateStatus] = useState(null);
+    const [imageUploading, setImageUploading] = useState(false);
+    const [updateStatus, setUpdateStatus] = useState(null);
+    const [showModel, setShowModel] = useState(false);
     const imagePickerRef = useRef();
     const dispatch = useDispatch();
 
@@ -68,23 +80,23 @@ export default function DashProfile() {
                     setImageFileURL(downloadUrl);
                     setImageUploadProgress(null);
                     setFormData({ ...formData, profilePicture: downloadUrl });
-                    setImageUploading(false)
+                    setImageUploading(false);
                 });
             }
         );
     };
 
     const handleDataChange = (e) => {
-        setUpdateStatus(null)
+        setUpdateStatus(null);
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
     const handleFormSubmit = async (e) => {
-        setUpdateStatus(null)
+        setUpdateStatus(null);
         e.preventDefault();
 
-        if (Object.keys(formData).length === 0) { 
-            setUpdateStatus({fail : "Values are not changed"})
+        if (Object.keys(formData).length === 0) {
+            setUpdateStatus({ fail: "Values are not changed" });
             return;
         }
         try {
@@ -103,17 +115,34 @@ export default function DashProfile() {
             const data = await res.json();
             if (!res.ok) {
                 dispatch(submitFail(data.message));
-                setUpdateStatus({fail : data.message})
+                setUpdateStatus({ fail: data.message });
             } else {
                 dispatch(submitSuccess(data));
-                setUpdateStatus({pass : "Profile Updated successfully"})
+                setUpdateStatus({ pass: "Profile Updated successfully" });
             }
         } catch (error) {
             dispatch(submitFail(error.message));
-            setUpdateStatus({fail : error.message})
+            setUpdateStatus({ fail: error.message });
         }
     };
 
+    const handleDeleteAccount = async () => {
+        setShowModel(false);
+        try {
+            dispatch(deleteStart());
+            const res = await fetch(`api/user/delete/${currentUser.payload._id}`, {
+                method: "DELETE",
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                dispatch(deleteFail(data.message));
+            } else {
+                dispatch(deleteSuccess());
+            }
+        } catch (error) {
+            dispatch(deleteFail());
+        }
+    };
     return (
         <div className="m-auto max-w-lg p-3 w-full">
             <h1 className="my-7 text-center font-semibold text-3xl">Profile</h1>
@@ -184,19 +213,74 @@ export default function DashProfile() {
                     placeholder="*********"
                     onChange={handleDataChange}
                 />
-                {
-                    !imageUploading &&  ( <Button type="submit" gradientDuoTone="purpleToBlue" outline>
+                {!imageUploading && (
+                    <Button
+                        type="submit"
+                        gradientDuoTone="purpleToBlue"
+                        outline
+                    >
                         Update
-                    </Button> )
-                }
-                
+                    </Button>
+                )}
+
                 <div className="text-red-500 flex flex-row justify-between mt-5">
-                    <span className=" cursor-pointer ">Delete Account</span>
+                    <span
+                        className=" cursor-pointer "
+                        onClick={() => {
+                            setShowModel(true);
+                        }}
+                    >
+                        Delete Account
+                    </span>
                     <span className=" cursor-pointer ">Sign Out</span>
                 </div>
             </form>
 
-            {updateStatus && (<Alert color={updateStatus.fail ? "failure" : "success"} className="mt-5">{updateStatus.fail ? updateStatus.fail : updateStatus.pass}</Alert>)}
+            {updateStatus && (
+                <Alert
+                    color={updateStatus.fail ? "failure" : "success"}
+                    className="mt-5"
+                >
+                    {updateStatus.fail ? updateStatus.fail : updateStatus.pass}
+                </Alert>
+            )}
+
+            <Modal
+                show={showModel}
+                onClose={() => {
+                    setShowModel(false);
+                }}
+                size="md"
+                popup
+            >
+                <ModalHeader />
+                <ModalBody>
+                    <div className="text-center">
+                        <HiOutlineExclamationCircle
+                            className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto"
+                        />
+                        <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
+                            Are you sure you want to delete your account?
+                        </h3>
+                        <div className="flex justify-center gap-4">
+                            <Button
+                                color="failure"
+                                onClick={handleDeleteAccount}
+                            >
+                                yes,Delete
+                            </Button>
+                            <Button
+                                color="gray"
+                                onClick={() => {
+                                    setShowModel(false);
+                                }}
+                            >
+                                No,cancel
+                            </Button>
+                        </div>
+                    </div>
+                </ModalBody>
+            </Modal>
         </div>
     );
 }
