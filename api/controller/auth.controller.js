@@ -60,7 +60,7 @@ exports.postLogin = (req, res, next) => {
                     return res
                         .status(200)
                         .cookie("access_token", token, { httpOnly: true })
-                        .json({ rest, token });
+                        .json(rest);
                 } else {
                     return next(errorHandler(400, "Password is invalid."));
                 }

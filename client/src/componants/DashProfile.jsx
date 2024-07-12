@@ -30,6 +30,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 export default function DashProfile() {
     const { currentUser } = useSelector((state) => state.user);
+    const admin = currentUser.payload.admin;
     const [imageFile, setImageFile] = useState(null);
     const [imageFileURL, setImageFileURL] = useState(null);
     const [imageUploadProgress, setImageUploadProgress] = useState(null);
@@ -41,6 +42,8 @@ export default function DashProfile() {
     const imagePickerRef = useRef();
     const dispatch = useDispatch();
 
+    console.log();
+
     const onImageChange = (e) => {
         const file = e.target.files[0];
         setImageFile(file);
@@ -51,6 +54,7 @@ export default function DashProfile() {
         if (imageFile) {
             uploadImage();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [imageFile]);
 
     const uploadImage = () => {
@@ -148,15 +152,15 @@ export default function DashProfile() {
         }
     };
 
-    const handleSignOut = async() => {
+    const handleSignOut = async () => {
         try {
             const res = await fetch("http://localhost:3000/api/user/sign-out", {
                 method: "POST",
             });
             const data = await res.json();
-            if(!res.ok){
+            if (!res.ok) {
                 console.log(data.message);
-            }else{
+            } else {
                 dispatch(signOutSuccess());
             }
         } catch (error) {
@@ -240,6 +244,11 @@ export default function DashProfile() {
                         outline
                     >
                         Update
+                    </Button>
+                )}
+                {admin && (
+                    <Button type="submit" gradientDuoTone="purpleToPink">
+                        Create post
                     </Button>
                 )}
 

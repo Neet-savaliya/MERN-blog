@@ -37,15 +37,14 @@ export default function SignIn() {
             });
 
             const data = await res.json();
-            console.log("data with token :", data);
-            const { rest } = data;
-            console.log(rest);
-            if (res.ok) {
-                dispatch(signInSuccess(rest));
-                navigate("/");
-            }
-            if (data.success === false) {
+            // console.log("data with token :", data);
+            // const { rest } = data;
+            // console.log(rest);
+            if (!res.ok) {
                 dispatch(signInFail(data.message));
+            }else{
+                dispatch(signInSuccess(data));
+                navigate("/");
             }
         } catch (err) {
             dispatch(signInFail(err));
@@ -111,8 +110,8 @@ export default function SignIn() {
                     </Link>
                 </div>
                 {errorMessage && (
-                    <Alert color="failure" mt-5>
-                        {errorMessage}
+                    <Alert color="failure" className="mt-5" >
+                        {errorMessage.payload}
                     </Alert>
                 )}
             </div>
