@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/CreatePost.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1720768531399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720769959196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n export default function CreatePost() {\r\n   return (\r\n-    <div></div>\r\n+    <div ></div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720769965523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n export default function CreatePost() {\r\n   return (\r\n-    <div className=\"min-h-\"></div>\r\n+    <div className=\"min-h-s\"></div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1720768531399,
+            "name": "Commit-0",
+            "content": "\r\nexport default function CreatePost() {\r\n  return (\r\n    <div>CreatePost</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

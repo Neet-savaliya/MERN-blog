@@ -27,6 +27,7 @@ import {
     signOutSuccess,
 } from "../redux/user/userSlice";
 import "react-circular-progressbar/dist/styles.css";
+import { Link } from "react-router-dom";
 
 export default function DashProfile() {
     const { currentUser } = useSelector((state) => state.user);
@@ -246,11 +247,13 @@ export default function DashProfile() {
                         Update
                     </Button>
                 )}
+                <Link to= "/create-post" className="w-100">
                 {admin && (
-                    <Button type="submit" gradientDuoTone="purpleToPink">
+                    <Button type="button" gradientDuoTone="purpleToPink" className="w-full">
                         Create post
                     </Button>
                 )}
+                </Link>
 
                 <div className="text-red-500 flex flex-row justify-between mt-5">
                     <span

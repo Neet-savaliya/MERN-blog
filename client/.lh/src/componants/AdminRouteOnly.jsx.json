@@ -1,0 +1,134 @@
+{
+    "sourceFile": "src/componants/AdminRouteOnly.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1720768607003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720768680542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import React from 'react'\r\n \r\n+\r\n export default function AdminRouteOnly() {\r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1720768687252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+import { useDispatch } from \"react-redux\"\r\n \r\n-\r\n export default function AdminRouteOnly() {\r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1720768703089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useDispatch } from \"react-redux\"\r\n+import { useDispatch } from \"react-redux\r\n \r\n export default function AdminRouteOnly() {\r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n"
+                },
+                {
+                    "date": 1720768708772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useDispatch } from \"react-redux\r\n+import\r\n \r\n export default function AdminRouteOnly() {\r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n"
+                },
+                {
+                    "date": 1720768718578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import { useSelector } from \"react-redux\"\r\n+\r\n+export default function AdminRouteOnly() {\r\n+  return (\r\n+    <div>AdminRouteOnly</div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1720768724947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,8 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function AdminRouteOnly() {\r\n+    const \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n-import\r\n-\r\n-export default function AdminRouteOnly() {\r\n-  return (\r\n-    <div>AdminRouteOnly</div>\r\n-  )\r\n-}\r\n"
+                },
+                {
+                    "date": 1720768731059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function AdminRouteOnly() {\r\n-    const \r\n+    const currentUser\r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720768739451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function AdminRouteOnly() {\r\n-    const currentUser\r\n+    const {currentUser} = useSelector() \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720768745831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useSelector } from \"react-redux\"\r\n+import \r\n \r\n export default function AdminRouteOnly() {\r\n-    const {currentUser} = useSelector() \r\n+    const {currentUser} = useSelector(state) \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720768754813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useSelector } from \"react-redux\"\r\n-import \r\n+import {state}\r\n \r\n export default function AdminRouteOnly() {\r\n     const {currentUser} = useSelector(state) \r\n   return (\r\n"
+                },
+                {
+                    "date": 1720768892251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { useSelector } from \"react-redux\"\r\n-import {state}\r\n+import {state} from \r\n \r\n export default function AdminRouteOnly() {\r\n-    const {currentUser} = useSelector(state) \r\n+    const {currentUser} = useSelector(\r\n+      ()\r\n+    ) \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720768898722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import {state} from \r\n \r\n export default function AdminRouteOnly() {\r\n     const {currentUser} = useSelector(\r\n-      ()\r\n+      (state) => state.user\r\n     ) \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1720768935417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n import {state} from \r\n \r\n export default function AdminRouteOnly() {\r\n     const {currentUser} = useSelector(\r\n-      (state) => state.user\r\n-    ) \r\n+      (state) => state.user) \r\n   return (\r\n     <div>AdminRouteOnly</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1720768940741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useSelector } from \"react-redux\"\r\n-import {state} from \r\n+import { Outlet } from \"react-router-dom\" \r\n \r\n export default function AdminRouteOnly() {\r\n     const {currentUser} = useSelector(\r\n       (state) => state.user) \r\n"
+                },
+                {
+                    "date": 1720768947789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useSelector } from \"react-redux\"\r\n-import { Outlet } from \"react-router-dom\" \r\n+import { Outlet, Navigate} from \"react-router-dom\" \r\n \r\n export default function AdminRouteOnly() {\r\n     const {currentUser} = useSelector(\r\n       (state) => state.user) \r\n"
+                },
+                {
+                    "date": 1720768958375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n-import { useSelector } from \"react-redux\"\r\n-import { Outlet, Navigate} from \"react-router-dom\" \r\n+import { useSelector } from \"react-redux\";\r\n+import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n-    const {currentUser} = useSelector(\r\n-      (state) => state.user) \r\n-  return (\r\n-    <div>AdminRouteOnly</div>\r\n-  )\r\n+    const { currentUser } = useSelector((state) => state.user);\r\n+    return ;\r\n }\r\n"
+                },
+                {
+                    "date": 1720768965086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return ;\r\n+    return currentUser.payload.;\r\n }\r\n"
+                },
+                {
+                    "date": 1720768970238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.;\r\n+    return currentUser.payload.admin;\r\n }\r\n"
+                },
+                {
+                    "date": 1720768978314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin;\r\n+    return currentUser.payload.admin ? <></>;\r\n }\r\n"
+                },
+                {
+                    "date": 1720768985800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <></>;\r\n+    return currentUser.payload.admin ? Navigate();\r\n }\r\n"
+                },
+                {
+                    "date": 1720769009304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? Navigate();\r\n+    return currentUser.payload.admin ? ();\r\n }\r\n"
+                },
+                {
+                    "date": 1720769014688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? ();\r\n+    return currentUser.payload.admin ? <Outlet></Outlet>\r\n }\r\n"
+                },
+                {
+                    "date": 1720769020432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet></Outlet>\r\n+    return currentUser.payload.admin ? </Outlet>\r\n }\r\n"
+                },
+                {
+                    "date": 1720769026080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? </Outlet>\r\n+    return currentUser.payload.admin ? <Outlet/> : \r\n }\r\n"
+                },
+                {
+                    "date": 1720769056799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet/> : \r\n+    return currentUser.payload.admin ? <Outlet/> : <\r\n }\r\n"
+                },
+                {
+                    "date": 1720769062308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet/> : <\r\n+    return currentUser.payload.admin ? <Outlet/> : <Navigate\r\n }\r\n"
+                },
+                {
+                    "date": 1720769076935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet/> : <Navigate\r\n+    return currentUser.payload.admin ? <Outlet/> : <Navigate to=\"\"/>\r\n }\r\n"
+                },
+                {
+                    "date": 1720769094713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet/> : <Navigate to=\"\"/>\r\n+    return currentUser.payload.admin ? <Outlet/> : <Navigate to=\"profile?\"/>\r\n }\r\n"
+                },
+                {
+                    "date": 1720769101563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n import { Outlet, Navigate } from \"react-router-dom\";\r\n \r\n export default function AdminRouteOnly() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    return currentUser.payload.admin ? <Outlet/> : <Navigate to=\"profile?\"/>\r\n+    return currentUser.payload.admin ? <Outlet/> : <Navigate to=\"/profile?tab=profile\"/>\r\n }\r\n"
+                }
+            ],
+            "date": 1720768607003,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function AdminRouteOnly() {\r\n  return (\r\n    <div>AdminRouteOnly</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
