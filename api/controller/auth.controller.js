@@ -2,7 +2,6 @@ const bcrypt = require("bcryptjs");
 const errorHandler = require("../utils/customError.js");
 const User = require("../models/user.model.js");
 const jwt = require("jsonwebtoken");
-const { getPriority } = require("os");
 
 exports.postSignup = (req, res, next) => {
     console.log(req.body);
@@ -56,7 +55,6 @@ exports.postLogin = (req, res, next) => {
                         process.env.JWT_SECRET
                     );
                     const { password: pass, ...rest } = user._doc;
-                    // window.localStorage.setItem("access_token", token);
                     return res
                         .status(200)
                         .cookie("access_token", token, { httpOnly: true })

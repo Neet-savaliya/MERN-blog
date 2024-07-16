@@ -4,9 +4,9 @@ const customError = require("./customError");
 module.exports.tokenVerify = (req, res, next) => {
     const token = req.cookies.access_token;
     
-    // const userId = req.params.userId;
+    const userId = req.params.userId;
 
-    // console.log(token ,process.env.JWT_SECRET);
+    console.log(token ,userId);
 
     // jwt.verify(token, process.env.JWT_SECRET, (err,data) => {
     //     console.log(data , userId);

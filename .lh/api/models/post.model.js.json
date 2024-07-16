@@ -1,0 +1,46 @@
+{
+    "sourceFile": "api/models/post.model.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1721111650479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721111659476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+const {Schema}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1721111675305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+const mongoose = require(\"mongoose\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1721111683476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const mongoose = require(\"mongoose\")\r\n+\r\n+const Schema = mongoo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1721111707259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+const mongoose = require(\"mongoose\")\r\n+\r\n+const Schema = mongoose.Schema;\r\n+\r\n"
+                },
+                {
+                    "date": 1721111712887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+const mongoose = require(\"mongoose\")\r\n+\r\n+const postSchema = mongoose.Schema;\r\n+\r\n"
+                },
+                {
+                    "date": 1721111718710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n const mongoose = require(\"mongoose\")\r\n \r\n-const postSchema = new mongoose.Schema;\r\n+const postSchema = new mongoose.Schema()\r\n \r\n"
+                },
+                {
+                    "date": 1721112048464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n const mongoose = require(\"mongoose\")\r\n \r\n-const postSchema = new mongoose.Schema()\r\n+const postSchema = new mongoose.Schema({})\r\n \r\n"
+                }
+            ],
+            "date": 1721111650479,
+            "name": "Commit-0",
+            "content": "const "
+        }
+    ]
+}
