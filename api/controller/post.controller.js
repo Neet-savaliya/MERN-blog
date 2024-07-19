@@ -22,7 +22,7 @@ exports.postPostSubmit = async (req, res, next) => {
 
     try {
         const savedPost = await newPost.save()
-        res.status(200).json({savedPost})
+        res.status(200).json(savedPost)
     } catch (error) {
         next(error)
     }
