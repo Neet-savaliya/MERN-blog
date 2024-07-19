@@ -57,7 +57,7 @@ exports.postLogin = (req, res, next) => {
                     const { password: pass, ...rest } = user._doc;
                     return res
                         .status(200)
-                        .cookie("access_token", token, { httpOnly: true })
+                        .cookie("access_token", token, { httpOnly: true, sameSite:"None" })
                         .json(rest);
                 } else {
                     return next(errorHandler(400, "Password is invalid."));
@@ -81,7 +81,7 @@ exports.postGoogleSignup = (req, res, next) => {
                 // window.localStorage.setItem("access_token", token);
                 return res
                     .status(200)
-                    .cookie("access_token", token, { httpOnly: true })
+                    .cookie("access_token", token, { httpOnly: true , sameSite:"None" })
                     .json(rest);
             } else {
                 const randomPass =
@@ -114,7 +114,7 @@ exports.postGoogleSignup = (req, res, next) => {
                 // window.localStorage.setItem("access_token", token);
                 return res
                     .status(200)
-                    .cookie("access_token", token, { httpOnly: true })
+                    .cookie("access_token", token, { httpOnly: true , sameSite:"None" })
                     .json(rest);
             }
         })

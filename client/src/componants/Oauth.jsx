@@ -25,6 +25,7 @@ export default function Oauth() {
                             email: data.user.email,
                             googlePhotoUrl: data.user.photoURL,
                         }),
+                        credentials:"include"
                     })
                         .then((res) => {
                             if (res.ok) {
