@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/componants/Dashboard.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1721444801118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1721444801118,
+            "name": "Commit-0",
+            "content": "// eslint-disable-next-line no-unused-vars\r\nimport React, { useEffect, useState } from \"react\";\r\nimport { useLocation } from \"react-router-dom\";\r\nimport DashSidebar from \"./DashSidebar\";\r\nimport DashProfile from \"./DashProfile\";\r\n\r\nexport default function Dashboard() {\r\n    const location = useLocation();\r\n    const [tab, setTab] = useState(\"\");\r\n    useEffect(() => {\r\n        const urlPrams = new URLSearchParams(location.search);\r\n        const tabFromUrl = urlPrams.get(\"tab\");\r\n        if (tabFromUrl) {\r\n            setTab(tabFromUrl);\r\n        }\r\n    }, [location.search]);\r\n    return (\r\n        <div className=\"min-h-screen flex flex-col md:flex-row \">\r\n            <div className=\"md:w-56\">\r\n                <DashSidebar className=\"\"/>\r\n            </div>\r\n            {tab === \"profile\" && <DashProfile />}\r\n        </div>\r\n    );\r\n}\r\n"
+        }
+    ]
+}
