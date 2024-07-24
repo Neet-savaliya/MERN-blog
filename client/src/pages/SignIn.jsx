@@ -26,7 +26,7 @@ export default function SignIn() {
         if (!inputText.email || !inputText.password) {
             dispatch(signInFail("Please enter all the fields."));
         }
-        console.log(JSON.stringify(inputText));
+        // console.log(JSON.stringify(inputText));
         try {
             dispatch(signInStart());
             const res = await fetch("/api/auth/login", {

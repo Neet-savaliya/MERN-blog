@@ -1,4 +1,4 @@
-const  Post  = require("../models/post.model");
+const Post = require("../models/post.model");
 const customError = require("../utils/customError");
 
 exports.postPostSubmit = async (req, res, next) => {
@@ -17,13 +17,55 @@ exports.postPostSubmit = async (req, res, next) => {
         .replace(/[^a-zA-Z0-9-]/g, "");
 
     const newPost = new Post({
-        ...req.body,slug
-    })
+        ...req.body,
+        slug,
+    });
 
     try {
-        const savedPost = await newPost.save()
-        res.status(200).json(savedPost)
+        const savedPost = await newPost.save();
+        res.status(200).json(savedPost);
     } catch (error) {
-        next(error)
+        next(error);
+    }
+};
+
+exports.getPosts = async (req, res, next) => {
+    try {
+        const startIndex = req.query.startIndex || 0;
+        const limit = req.query.limit || 9;
+        const sortDirection = req.query.order === "asc" ? 1 : -1;
+        const post = await Post.find({
+            ...(req.query.userId && { userId: req.query.userId }),
+            ...(req.query.slug && { slug: req.query.slug }),
+            ...(req.query.category && { category: req.query.category }),
+            ...(req.query.postId && { postId: req.query.postId }),
+            ...(req.query.searchTerm && {
+                $or: [
+                    { title: { $regex: req.query.searchTerm, $option: "i" } },
+                    { content: { $regex: req.query.searchTerm, $option: "i" } },
+                ],
+            }),
+        })
+            .sort({updatedAt : sortDirection})
+            .skip(startIndex)
+            .limit(limit);
+
+        const totalPost = await Post.countDocuments();
+
+        const now = new Date();
+
+        const lastMonthAgo = new Date(
+            now.getFullYear(),
+            now.getMonth() - 1,
+            now.getDate()
+        );
+
+        const lastMonthPost = await Post.countDocuments({
+            createdAt: { $gte: lastMonthAgo },
+        });
+
+        res.status(200).json({post, totalPost, lastMonthPost});
+    } catch (error) {
+        next(error);
     }
 };

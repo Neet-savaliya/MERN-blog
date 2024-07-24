@@ -109,9 +109,9 @@ exports.postGoogleSignup = (req, res, next) => {
                     { id: user._id, admin: user.admin },
                     process.env.JWT_SECRET
                 );
-                console.log(user);
                 const { password: pass, ...rest } = user._doc;
                 // window.localStorage.setItem("access_token", token);
+                console.log("Running send another head");
                 return res
                     .status(200)
                     .cookie("access_token", token, { httpOnly: true , sameSite:"None" })

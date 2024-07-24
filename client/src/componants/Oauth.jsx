@@ -44,7 +44,7 @@ export default function Oauth() {
                         .catch((err) => console.log(err));
                 })
                 .then((data) => {
-                    console.log("data from google", 2);
+                    // console.log("data from google", 2);
                     dispatch(signInSuccess(data));
                     return navigate("/");
                 });
