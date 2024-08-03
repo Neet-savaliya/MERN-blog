@@ -1,0 +1,166 @@
+{
+    "sourceFile": "src/componants/DashPosts.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 37,
+            "patches": [
+                {
+                    "date": 1721798718453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721798725455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n+import { useEffect } from \"react\"\r\n \r\n export default function DashPosts() {\r\n \r\n-  \r\n+  useEffect(())\r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1721798731810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import { useEffect } from \"react\"\r\n \r\n export default function DashPosts() {\r\n \r\n-  useEffect(())\r\n+  useEffect(() => {\r\n+\r\n+  })\r\n+  \r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1721798743274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n-import { useEffect } from \"react\"\r\n+import { useEffect } from \"react\"\\\r\n \r\n+\r\n export default function DashPosts() {\r\n \r\n   useEffect(() => {\r\n \r\n   })\r\n-  \r\n+\r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1721798748847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-import { useEffect } from \"react\"\\\r\n+import { useEffect } from \"react\"\r\n+import \r\n \r\n-\r\n export default function DashPosts() {\r\n \r\n   useEffect(() => {\r\n \r\n"
+                },
+                {
+                    "date": 1721798756775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useEffect } from \"react\"\r\n-import \r\n+import { useSelector } from \"react-redux\"\r\n \r\n export default function DashPosts() {\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1721798766501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function DashPosts() {\r\n \r\n+  const {currentUser}\r\n+\r\n   useEffect(() => {\r\n \r\n   })\r\n \r\n"
+                },
+                {
+                    "date": 1721798774226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function DashPosts() {\r\n \r\n-  const {currentUser}\r\n+  const {currentUser} = useSelector()\r\n \r\n   useEffect(() => {\r\n \r\n   })\r\n"
+                },
+                {
+                    "date": 1721798779977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useSelector } from \"react-redux\"\r\n \r\n export default function DashPosts() {\r\n \r\n-  const {currentUser} = useSelector()\r\n+  const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n \r\n   })\r\n"
+                },
+                {
+                    "date": 1721798785838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n \r\n-  })\r\n+  },[])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1721798792219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n \r\n-  },[])\r\n+  },[currentUser.payloa])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1721798798248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n+    \r\n+  },[currentUser.payload._id])\r\n \r\n-  },[currentUser.payloa])\r\n-\r\n   return (\r\n     <div>DashPosts</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1721798809222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n-    \r\n+    const getPost\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n"
+                },
+                {
+                    "date": 1721798840665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n-    const getPost\r\n+    const getPost = \r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n"
+                },
+                {
+                    "date": 1721798846566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n export default function DashPosts() {\r\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n-  useEffect(() => {\r\n+  useEffect(async() => {\r\n     const getPost = \r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798854171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n export default function DashPosts() {\r\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n-  useEffect(async() => {\r\n-    const getPost = \r\n+  useEffect(() => {\r\n+    const getPost = ()\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n"
+                },
+                {
+                    "date": 1721798861054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n-    const getPost = ()\r\n+    const getPost = async() => {\r\n+      \r\n+    }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n     <div>DashPosts</div>\r\n"
+                },
+                {
+                    "date": 1721798868693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n \r\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n-    const getPost = async() => {\r\n-      \r\n+    const fetchPost = async() => {\r\n+\r\n     }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798878060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n     const fetchPost = async() => {\r\n-\r\n+      const posts = fetch()\r\n     }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798885754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n     const fetchPost = async() => {\r\n-      const posts = fetch()\r\n+      const posts = await fetch(\"\")\r\n     }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798892642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n     const fetchPost = async() => {\r\n-      const posts = await fetch(\"\")\r\n+      const posts = await fetch(\"/api/post/posts\")\r\n     }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798909866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n   const {currentUser} = useSelector(state => state.user)\r\n \r\n   useEffect(() => {\r\n     const fetchPost = async() => {\r\n-      const posts = await fetch(\"/api/post/posts\")\r\n+      const posts = await fetch(\"/api/post/posts\",{\r\n+      method : \"GET\"\r\n+      })\r\n     }\r\n   },[currentUser.payload._id])\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1721798921796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,18 @@\n-import { useEffect } from \"react\"\r\n-import { useSelector } from \"react-redux\"\r\n+import { useEffect } from \"react\";\r\n+import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPosts() {\r\n+    const { currentUser } = useSelector((state) => state.user);\r\n \r\n-  const {currentUser} = useSelector(state => state.user)\r\n+    useEffect(() => {\r\n+        const fetchPost = async () => {\r\n+            const posts = await fetch(\"/api/post/posts\", {\r\n+                method: \"GET\",\r\n+            });\r\n \r\n-  useEffect(() => {\r\n-    const fetchPost = async() => {\r\n-      const posts = await fetch(\"/api/post/posts\",{\r\n-      method : \"GET\"\r\n-      })\r\n-    }\r\n-  },[currentUser.payload._id])\r\n+            const \r\n+        };\r\n+    }, [currentUser.payload._id]);\r\n \r\n-  return (\r\n-    <div>DashPosts</div>\r\n-  )\r\n+    return <div>DashPosts</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1721798928133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n     const { currentUser } = useSelector((state) => state.user);\r\n \r\n     useEffect(() => {\r\n         const fetchPost = async () => {\r\n-            const posts = await fetch(\"/api/post/posts\", {\r\n+            const res = await fetch(\"/api/post/posts\", {\r\n                 method: \"GET\",\r\n             });\r\n \r\n-            const \r\n+            const data\r\n         };\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n"
+                },
+                {
+                    "date": 1721798935694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n             const res = await fetch(\"/api/post/posts\", {\r\n                 method: \"GET\",\r\n             });\r\n \r\n-            const data\r\n+            const data = res.json()\r\n         };\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n"
+                },
+                {
+                    "date": 1721798941198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n             const res = await fetch(\"/api/post/posts\", {\r\n                 method: \"GET\",\r\n             });\r\n \r\n-            const data = res.json()\r\n+            const data = await res.json()\r\n         };\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n"
+                },
+                {
+                    "date": 1721798950032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n                 method: \"GET\",\r\n             });\r\n \r\n             const data = await res.json()\r\n+            console.log(data);\r\n         };\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n"
+                },
+                {
+                    "date": 1721798959010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n \r\n             const data = await res.json()\r\n             console.log(data);\r\n         };\r\n+\r\n+        if(current)\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1721798965301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             const data = await res.json()\r\n             console.log(data);\r\n         };\r\n \r\n-        if(current)\r\n+        if(currentUser.payload.)\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1721798971821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n             const data = await res.json()\r\n             console.log(data);\r\n         };\r\n \r\n-        if(currentUser.payload.)\r\n+        if(currentUser.payload.admin){\r\n+          fetch\r\n+        }\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1721798978212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             console.log(data);\r\n         };\r\n \r\n         if(currentUser.payload.admin){\r\n-          fetch\r\n+          fetchPost();\r\n         }\r\n     }, [currentUser.payload._id]);\r\n \r\n     return <div>DashPosts</div>;\r\n"
+                },
+                {
+                    "date": 1721799003988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n \r\n         if(currentUser.payload.admin){\r\n           fetchPost();\r\n         }\r\n-    }, [currentUser.payload._id]);\r\n+    }, [currentUser.payload._id,currentUser.payload.admin]);\r\n \r\n     return <div>DashPosts</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1721799074790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 method: \"GET\",\r\n             });\r\n \r\n             const data = await res.json()\r\n-            console.log(data);\r\n+            console.log(data.post);\r\n         };\r\n \r\n         if(currentUser.payload.admin){\r\n           fetchPost();\r\n"
+                },
+                {
+                    "date": 1721801379151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPosts() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n+    stat\r\n \r\n     useEffect(() => {\r\n         const fetchPost = async () => {\r\n             const res = await fetch(\"/api/post/posts\", {\r\n"
+                },
+                {
+                    "date": 1721801385298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPosts() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    stat\r\n+    const userPos\r\n \r\n     useEffect(() => {\r\n         const fetchPost = async () => {\r\n             const res = await fetch(\"/api/post/posts\", {\r\n"
+                },
+                {
+                    "date": 1721801393502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPosts() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    const userPos\r\n+    const [userPost,  set]\r\n \r\n     useEffect(() => {\r\n         const fetchPost = async () => {\r\n             const res = await fetch(\"/api/post/posts\", {\r\n"
+                },
+                {
+                    "date": 1721801404426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPosts() {\r\n     const { currentUser } = useSelector((state) => state.user);\r\n-    const [userPost,  setUserPost] =use\r\n+    const [userPost,  setUserPost] =useS\r\n \r\n     useEffect(() => {\r\n         const fetchPost = async () => {\r\n             const res = await fetch(\"/api/post/posts\", {\r\n"
+                },
+                {
+                    "date": 1721801812550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useEffect, useState } from \"react\";\r\n+import { useSelector } from \"react-redux\";\r\n+\r\n+export default function DashPosts() {\r\n+    const { currentUser } = useSelector((state) => state.user);\r\n+    const [userPost, setUserPost] = useState(null);\r\n+\r\n+    useEffect(() => {\r\n+        const fetchPost = async () => {\r\n+            const res = await fetch(\"/api/post/posts\", {\r\n+                method: \"GET\",\r\n+            });\r\n+\r\n+            const data = await res.json();\r\n+            if (res.ok) {\r\n+                setUserPost(data.post);\r\n+            }\r\n+        };\r\n+\r\n+        if (currentUser.payload.admin) {\r\n+            fetchPost();\r\n+        }\r\n+    }, [currentUser.payload._id, currentUser.payload.admin]);\r\n+\r\n+    return <div>\r\n+      {currentUser.payload.admin && }\r\n+    </div>;\r\n+}\r\n"
+                }
+            ],
+            "date": 1721798718453,
+            "name": "Commit-0",
+            "content": "\r\nexport default function DashPosts() {\r\n\r\n  \r\n  return (\r\n    <div>DashPosts</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

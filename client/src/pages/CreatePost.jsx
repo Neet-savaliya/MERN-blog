@@ -156,7 +156,7 @@ export default function CreatePost() {
                 <ReactQuill
                     theme="snow"
                     placeholder="Write something..."
-                    className="h-72 mb-14 mt-5 border-black border-2"
+                    className="h-72 mb-5 mt-5 border-black border-2 "
                     onChange={(value) => {
                         setFormData({ ...formData, content: value });
                     }}

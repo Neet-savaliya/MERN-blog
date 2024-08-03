@@ -1,0 +1,50 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1721798477736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1721798492226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n     },\n-    plugins: [flowbite.plugin(),],\n+    plugins: [flowbite.plugin(),npm install --save-dev tailwind-scrollbar],\n };\n"
+                },
+                {
+                    "date": 1721798500434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n     },\n-    plugins: [flowbite.plugin(),npm install --save-dev tailwind-scrollbar],\n+    plugins: [flowbite.plugin(),require('tailwind-scrollbar')],\n };\n"
+                },
+                {
+                    "date": 1721798517205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n     },\n-    plugins: [flowbite.plugin(),require('tailwind-scrollbar')],\n+    plugins: [flowbite.plugin(), require(\"tailwind-scrollbar\")],\n };\n"
+                },
+                {
+                    "date": 1721798533512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n /** @type {import('tailwindcss').Config} */\n \n import flowbite from \"flowbite-react/tailwind\";\n+imp\n \n export default {\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n"
+                },
+                {
+                    "date": 1721798546819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /** @type {import('tailwindcss').Config} */\n \n import flowbite from \"flowbite-react/tailwind\";\n-imp\n \n+\n export default {\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n"
+                },
+                {
+                    "date": 1721798553071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /** @type {import('tailwindcss').Config} */\n \n import flowbite from \"flowbite-react/tailwind\";\n+import \n \n-\n export default {\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n"
+                },
+                {
+                    "date": 1721798559309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /** @type {import('tailwindcss').Config} */\n \n import flowbite from \"flowbite-react/tailwind\";\n-import \n+import scrollbar from \"\"\n \n export default {\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n"
+                },
+                {
+                    "date": 1721798569674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n /** @type {import('tailwindcss').Config} */\n \n import flowbite from \"flowbite-react/tailwind\";\n-import scrollbar from \"\"\n+import scrollbar from \"tailwind-scrollbar\"\n \n export default {\n     content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n     theme: {\n         extend: {},\n     },\n-    plugins: [flowbite.plugin(), require(\"tailwind-scrollbar\")],\n+    plugins: [flowbite.plugin(), scrollbar],\n };\n"
+                }
+            ],
+            "date": 1721798477736,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\n\nimport flowbite from \"flowbite-react/tailwind\";\n\nexport default {\n    content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\", flowbite.content()],\n    theme: {\n        extend: {},\n    },\n    plugins: [flowbite.plugin(),],\n};\n"
+        }
+    ]
+}
