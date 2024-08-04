@@ -1,3 +1,4 @@
+const { error } = require("console");
 const Post = require("../models/post.model");
 const customError = require("../utils/customError");
 
@@ -62,10 +63,24 @@ exports.getPosts = async (req, res, next) => {
 
         const lastMonthPost = await Post.countDocuments({
             createdAt: { $gte: lastMonthAgo },
-        });
+        });  
 
         res.status(200).json({post, totalPost, lastMonthPost});
     } catch (error) {
         next(error);
     }
 };
+
+exports.deletePost =async (req, res, next) => {
+    const {postId} = req.params
+    try {
+        const data = await Post.findByIdAndDelete(postId)
+        if(data){
+            res.status(200).json({data :"Post deleted successfully."})
+        }else{
+            res.status(404).json({message:"Data not found!"})
+        }
+    } catch (error) {
+        next(error)
+    }
+}

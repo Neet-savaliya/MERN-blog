@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1713024506748,
@@ -28,6 +28,10 @@
                 {
                     "date": 1719144562421,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+# Logs\n+logs\n+*.log\n+npm-debug.log*\n+yarn-debug.log*\n+yarn-error.log*\n+pnpm-debug.log*\n+lerna-debug.log*\n+\n+node_modules\n+dist\n+dist-ssr\n+*.local\n+\n+# Editor directories and files\n+.vscode/*\n+!.vscode/extensions.json\n+.idea\n+.DS_Store\n+*.suo\n+*.ntvs*\n+*.njsproj\n+*.sln\n+*.sw?\n+\n+.env\n+\n+/client/src/firebase\n"
+                },
+                {
+                    "date": 1722745728199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,62 +23,7 @@\n *.sln\n *.sw?\n \n .env\n+practice.js\n \n-/client/src/firebase\n-# Logs\n-logs\n-*.log\n-npm-debug.log*\n-yarn-debug.log*\n-yarn-error.log*\n-pnpm-debug.log*\n-lerna-debug.log*\n-\n-node_modules\n-dist\n-dist-ssr\n-*.local\n-\n-# Editor directories and files\n-.vscode/*\n-!.vscode/extensions.json\n-.idea\n-.DS_Store\n-*.suo\n-*.ntvs*\n-*.njsproj\n-*.sln\n-*.sw?\n-\n-.env\n-\n-/client\n-# Logs\n-logs\n-*.log\n-npm-debug.log*\n-yarn-debug.log*\n-yarn-error.log*\n-pnpm-debug.log*\n-lerna-debug.log*\n-\n-node_modules\n-dist\n-dist-ssr\n-*.local\n-\n-# Editor directories and files\n-.vscode/*\n-!.vscode/extensions.json\n-.idea\n-.DS_Store\n-*.suo\n-*.ntvs*\n-*.njsproj\n-*.sln\n-*.sw?\n-\n-.env\n-\n-\n+/client/src/firebase.js\n"
                 }
             ],
             "date": 1713024506748,

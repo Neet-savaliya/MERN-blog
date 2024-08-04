@@ -1,0 +1,50 @@
+{
+    "sourceFile": "practice.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1722745736146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722745744132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+const arr = [1,2,3,4,4,5]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745752802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const arr = [1,2,3,4,4,5];\r\n+\r\n+clg\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745762845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n const arr = [1,2,3,4,4,5];\r\n \r\n-clg\n-const arr = [1,2,3,4,4,5]\n-const \n\\ No newline at end of file\n+console.log([...arr]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745782075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const arr = [1,2,3,4,4,5];\r\n \r\n-console.log([...arr]);\n\\ No newline at end of file\n+console.log([...arr.map()]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745789838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const arr = [1,2,3,4,4,5];\r\n+\r\n+console.log([...arr.map((num) => num !==)]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745814215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const arr = [1,2,3,4,4,5];\r\n+\r\n+console.log([...arr.map((num) => ifnum !== 1)]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745823288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n const arr = [1,2,3,4,4,5];\r\n \r\n-console.log([...arr.map((num) => if(num !== 1))]);\n\\ No newline at end of file\n+console.log([...arr.map((num) => num !== 1))]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722745829855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+const arr = [1,2,3,4,4,5];\r\n+\r\n+console.log([...arr.map((num) => num !== 1 )]);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1722745736146,
+            "name": "Commit-0",
+            "content": "const "
+        }
+    ]
+}
