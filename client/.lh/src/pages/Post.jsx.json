@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/Post.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1723127649458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723127659037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import React from 'react'\r\n \r\n+\r\n export default function Post() {\r\n   return (\r\n     <div>Post</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1723127724905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n+export default function Post() {\r\n \r\n-\r\n-export default function Post() {\r\n+    \r\n   return (\r\n     <div>Post</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1723127744806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Post() {\r\n \r\n-    \r\n+    user\r\n   return (\r\n     <div>Post</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1723127753517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n+import { useEffect } from \"react\"\r\n+\r\n export default function Post() {\r\n \r\n-    user\r\n+    useEffect\r\n   return (\r\n     <div>Post</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1723127760807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useEffect } from \"react\"\r\n \r\n export default function Post() {\r\n \r\n-    useEffect(() => {})\r\n+    useEffect(() => {},)\r\n   return (\r\n     <div>Post</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1723127784823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useEffect } from \"react\"\r\n import { useParams } from \"react-router-dom\"\r\n export default function Post() {\r\n-    const {postSlug}\r\n+    const {postSlug} \r\n     useEffect(() => {},[])\r\n   return (\r\n     <div>Post</div>\r\n   )\r\n"
+                }
+            ],
+            "date": 1723127649458,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function Post() {\r\n  return (\r\n    <div>Post</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
