@@ -9,13 +9,13 @@ import {
 import { FaArrowRight, FaUser } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { signOutSuccess } from "../redux/user/userSlice";
-import { HiDocumentText } from "react-icons/hi2";
+import { HiDocumentText, HiUserGroup } from "react-icons/hi2";
 import { useSelector } from "react-redux";
 
 export default function DashSidebar() {
     const location = useLocation();
-    const {currentUser} = useSelector((state) => state.user)
-    const dispatch = useDispatch()
+    const { currentUser } = useSelector((state) => state.user);
+    const dispatch = useDispatch();
     const [tab, setTab] = useState("");
     useEffect(() => {
         const urlPrams = new URLSearchParams(location.search);
@@ -25,15 +25,15 @@ export default function DashSidebar() {
         }
     }, [location.search]);
 
-    const handleSignOut = async() => {
+    const handleSignOut = async () => {
         try {
             const res = await fetch("http://localhost:3000/api/user/sign-out", {
                 method: "POST",
             });
             const data = await res.json();
-            if(!res.ok){
+            if (!res.ok) {
                 console.log(data.message);
-            }else{
+            } else {
                 dispatch(signOutSuccess());
             }
         } catch (error) {
@@ -48,25 +48,44 @@ export default function DashSidebar() {
                         <SidebarItem
                             icon={FaUser}
                             active={tab === "profile"}
-                            label={currentUser.payload.admin?"Admin":"User"}
+                            label={currentUser.payload.admin ? "Admin" : "User"}
                             labelColor="dark"
                             as="div"
                         >
                             Profile
                         </SidebarItem>
                     </Link>
-                    <Link to="/dashboard?tab=posts">
-                        <SidebarItem
-                            icon={HiDocumentText}
-                            active={tab === "posts"}
-                            labelColor="dark"
-                            as="div"
-                        >
-                            Posts
-                        </SidebarItem>
-                    </Link>
+                    {currentUser.payload.admin && (
+                        <Link to="/dashboard?tab=posts">
+                            <SidebarItem
+                                icon={HiDocumentText}
+                                active={tab === "posts"}
+                                labelColor="dark"
+                                as="div"
+                            >
+                                Posts
+                            </SidebarItem>
+                        </Link>
+                    )}
 
-                    <SidebarItem icon={FaArrowRight} className="cursor-pointer" onClick={handleSignOut}>
+                    {currentUser.payload.admin && (
+                        <Link to="/dashboard?tab=users">
+                            <SidebarItem
+                                icon={HiUserGroup}
+                                active={tab === "users"}
+                                labelColor="dark"
+                                as="div"
+                            >
+                                Users
+                            </SidebarItem>
+                        </Link>
+                    )}
+
+                    <SidebarItem
+                        icon={FaArrowRight}
+                        className="cursor-pointer"
+                        onClick={handleSignOut}
+                    >
                         Sign Out
                     </SidebarItem>
                 </SidebarItemGroup>
