@@ -71,3 +71,43 @@ exports.postSignOut = (req, res, next) => {
         next(error);
     }
 };
+
+exports.getUsers = async (req, res, next) => {
+    try {
+        const startIndex = parseInt(req.query.startIndex) || 0;
+        const sortDirection = req.query.sort === "ace" ? 1 : -1;
+        const limit = parseInt(req.query.limit) || 9;
+
+        const users = await User.find()
+            .skip(startIndex)
+            .limit(limit)
+            .sort({ createdAt: sortDirection });
+
+        const userWithoutPassword = users.map((user) => {
+            const { password, ...rest } = user._doc;
+            return rest;
+        });
+
+        const totalUsers = await User.countDocuments();
+
+        const now = new Date();
+
+        const lastMonth = new Date(
+            now.getFullYear(),
+            now.getMonth() - 1,
+            now.getDate()
+        );
+
+        const lastMonthUsers = await User.countDocuments({
+            createdAt: { $gt: lastMonth },
+        });
+
+        res.status(200).json({
+            userWithoutPassword,
+            totalUsers,
+            lastMonthUsers,
+        });
+    } catch (error) {
+        next(error);
+    }
+};

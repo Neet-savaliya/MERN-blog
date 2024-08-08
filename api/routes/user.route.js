@@ -12,4 +12,6 @@ Router.delete("/delete/:userId", tokenVerify, userCtr.deleteAccount);
 
 Router.post("/sign-out",userCtr.postSignOut);
 
+Router.get("/getUsers",userCtr.getUsers);
+
 module.exports = Router;
