@@ -10,4 +10,5 @@ Route.delete("/delete-post/:postId",postCtr.deletePost);
 
 Route.put("/update-post/:postId",postCtr.updatePost)
 
+
 module.exports = Route

@@ -48,7 +48,27 @@ export default function DashUsers() {
         }
     };
 
-    const deleteUserHandler = () => {};
+    const deleteUserHandler = async (e) => {
+        e.preventDefault();
+
+        try {
+            const res = await fetch(`/api/user/delete/${deleteUserId}`, {
+                method: "DELETE",
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                setUsers((prev) =>
+                    prev.filter((user) => user._id !== deleteUserId)
+                );
+                setShowModel(false);
+            } else {
+                console.log(data.message);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className="table-auto overflow-x-scroll md:mx-auto p-3 scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300 dark:scrollbar-track-slate-700 dark:scrollbar-thumb-slate-500">
@@ -89,7 +109,7 @@ export default function DashUsers() {
                                         {user.admin ? (
                                             <FaCheck className="text-green-500" />
                                         ) : (
-                                            <FaTimes className="text-red-500"/>
+                                            <FaTimes className="text-red-500" />
                                         )}
                                     </Table.Cell>
                                     <Table.Cell key={`delete${user._id}`}>
@@ -117,7 +137,7 @@ export default function DashUsers() {
                     )}
                 </>
             ) : (
-                <p>No post yet..</p>
+                <p>No Users yet..</p>
             )}
             <Modal
                 show={showModel}
@@ -132,7 +152,7 @@ export default function DashUsers() {
                     <div className="text-center">
                         <HiOutlineExclamationCircle className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto" />
                         <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
-                            Are you sure you want to delete your account?
+                            Are you sure you want to delete this account?
                         </h3>
                         <div className="flex justify-center gap-4">
                             <Button color="failure" onClick={deleteUserHandler}>
