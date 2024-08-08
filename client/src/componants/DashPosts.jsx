@@ -57,12 +57,12 @@ export default function DashPosts() {
                 method: "delete",
             });
             const data = await res.json();
-            setShowModel(false)
-            if (!res.ok ) {
+            setShowModel(false);
+            if (!res.ok) {
                 console.log(data.message);
-            }else{
-                setUserPost((prev) => 
-                    prev.filter((post) => post._id !== deletePostId),
+            } else {
+                setUserPost((prev) =>
+                    prev.filter((post) => post._id !== deletePostId)
                 );
             }
         } catch (error) {
@@ -75,26 +75,37 @@ export default function DashPosts() {
             {currentUser.payload.admin && userPost.length > 0 ? (
                 <>
                     <Table hoverable className="shadow-md ">
-                        <Table.Head>
-                            <Table.HeadCell>Date Updated</Table.HeadCell>
-                            <Table.HeadCell>Post image</Table.HeadCell>
-                            <Table.HeadCell>Post title</Table.HeadCell>
-                            <Table.HeadCell>Category</Table.HeadCell>
-                            <Table.HeadCell>Delete</Table.HeadCell>
-                            <Table.HeadCell>
+                        <Table.Head key="head">
+                            <Table.HeadCell key="Date">
+                                Date Updated
+                            </Table.HeadCell>
+                            <Table.HeadCell key="Image">
+                                Post image
+                            </Table.HeadCell>
+                            <Table.HeadCell key="title">
+                                Post title
+                            </Table.HeadCell>
+                            <Table.HeadCell key="category">
+                                Category
+                            </Table.HeadCell>
+                            <Table.HeadCell key="Delete">Delete</Table.HeadCell>
+                            <Table.HeadCell key="edit">
                                 <span>Edit</span>
                             </Table.HeadCell>
                         </Table.Head>
                         {userPost.map((post) => (
                             // eslint-disable-next-line react/jsx-key
-                            <Table.Body>
-                                <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                                    <Table.Cell>
+                            <Table.Body key={`body${post._id}`}>
+                                <Table.Row
+                                    className="bg-white dark:border-gray-700 dark:bg-gray-800"
+                                    key="row"
+                                >
+                                    <Table.Cell key={post.updatedAt + post._id}>
                                         {new Date(
                                             post.updatedAt
                                         ).toLocaleDateString()}
                                     </Table.Cell>
-                                    <Table.Cell>
+                                    <Table.Cell key={post.slug}>
                                         <Link to={`/post/${post.slug}`}>
                                             <img
                                                 src={post.image}
@@ -103,7 +114,7 @@ export default function DashPosts() {
                                             />
                                         </Link>
                                     </Table.Cell>
-                                    <Table.Cell>
+                                    <Table.Cell key={post.title}>
                                         <Link
                                             className="font-medium text-gray-900 dark:text-white"
                                             to={`/post/${post.slug}`}
@@ -111,8 +122,8 @@ export default function DashPosts() {
                                             {post.title}
                                         </Link>
                                     </Table.Cell>
-                                    <Table.Cell>{post.category}</Table.Cell>
-                                    <Table.Cell>
+                                    <Table.Cell key={post.title + post.slug}>{post.category}</Table.Cell>
+                                    <Table.Cell key={`delete${post._id}`}>
                                         <span
                                             className="font-medium text-red-500 hover:underline cursor-pointer"
                                             onClick={() => {
@@ -123,7 +134,7 @@ export default function DashPosts() {
                                             Delete
                                         </span>
                                     </Table.Cell>
-                                    <Table.Cell>
+                                    <Table.Cell key={`edit${post._id} `}>
                                         <Link to={`/update-post/${post._id}`}>
                                             <span className="text-teal-500 cursor-pointer hover:underline">
                                                 Edit

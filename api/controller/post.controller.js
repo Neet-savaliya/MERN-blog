@@ -39,7 +39,7 @@ exports.getPosts = async (req, res, next) => {
             ...(req.query.userId && { userId: req.query.userId }),
             ...(req.query.slug && { slug: req.query.slug }),
             ...(req.query.category && { category: req.query.category }),
-            ...(req.query.postId && { postId: req.query.postId }),
+            ...(req.query.postId && { _id: req.query.postId }),
             ...(req.query.searchTerm && {
                 $or: [
                     { title: { $regex: req.query.searchTerm, $option: "i" } },
@@ -47,7 +47,7 @@ exports.getPosts = async (req, res, next) => {
                 ],
             }),
         })
-            .sort({updatedAt : sortDirection})
+            .sort({ updatedAt: sortDirection })
             .skip(startIndex)
             .limit(limit);
 
@@ -63,24 +63,45 @@ exports.getPosts = async (req, res, next) => {
 
         const lastMonthPost = await Post.countDocuments({
             createdAt: { $gte: lastMonthAgo },
-        });  
+        });
 
-        res.status(200).json({post, totalPost, lastMonthPost});
+        console.log(post);
+
+        res.status(200).json({ post, totalPost, lastMonthPost });
     } catch (error) {
         next(error);
     }
 };
 
-exports.deletePost =async (req, res, next) => {
-    const {postId} = req.params
+exports.deletePost = async (req, res, next) => {
+    const { postId } = req.params;
     try {
-        const data = await Post.findByIdAndDelete(postId)
-        if(data){
-            res.status(200).json({data :"Post deleted successfully."})
-        }else{
-            res.status(404).json({message:"Data not found!"})
+        const data = await Post.findByIdAndDelete(postId);
+        if (data) {
+            res.status(200).json({ data: "Post deleted successfully." });
+        } else {
+            res.status(404).json({ message: "Data not found!" });
         }
+    } catch (error) {
+        next(error);
+    }
+};
+
+exports.updatePost = async (req, res, next) => {
+    try {
+        const updatedPost = await Post.findByIdAndUpdate(
+            req.params.postId,
+            {
+                title: req.body.title,
+                content: req.body.content,
+                image: req.body.image,
+                category: req.body.category,
+            },
+            { new: true }
+        );
+
+        res.status(200).json(updatedPost);
     } catch (error) {
         next(error)
     }
-}
+};
