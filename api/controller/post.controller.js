@@ -1,4 +1,3 @@
-const { error } = require("console");
 const Post = require("../models/post.model");
 const customError = require("../utils/customError");
 
@@ -64,8 +63,6 @@ exports.getPosts = async (req, res, next) => {
         const lastMonthPost = await Post.countDocuments({
             createdAt: { $gte: lastMonthAgo },
         });
-
-        console.log(post);
 
         res.status(200).json({ post, totalPost, lastMonthPost });
     } catch (error) {

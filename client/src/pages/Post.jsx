@@ -1,13 +1,15 @@
 import { Button, Spinner } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import CallToAction from "../componants/CallToAction";
+import CommentSection from "../componants/CommentSection";
 export default function Post() {
     const { postSlug } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [post, setPost] = useState(null);
 
-    console.log(post);
+    // console.log(post);
 
     useEffect(() => {
         try {
@@ -21,12 +23,12 @@ export default function Post() {
                     setPost(data.post[0]);
                     setLoading(false);
                     setError(null);
-                    console.log(error);
                 }
 
                 if (!res.ok) {
                     setError(data.message);
                     setLoading(false);
+                    console.log(error);
                 }
             };
 
@@ -36,7 +38,7 @@ export default function Post() {
             setLoading(false);
         }
 
-        console.log(postSlug);
+        // console.log(postSlug);
     }, [postSlug]);
 
     if (loading) {
@@ -77,6 +79,8 @@ export default function Post() {
                 className="p-3 max-w-2xl mx-auto w-full post-content"
                 dangerouslySetInnerHTML={{ __html: post && post.content }}
             ></div>
+            <CallToAction />
+            <CommentSection postId={post._id} />
         </main>
     );
 }

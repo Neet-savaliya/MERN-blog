@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/componants/CommentSection.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1724571957709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1724571963861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import React from 'react'\r\n \r\n export default function CommentSection() {\r\n   return (\r\n     <div>CommentSection</div>\r\n"
+                },
+                {
+                    "date": 1724571969662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+export default function CommentSection() {\r\n+    return <div>CommentSection</div>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1724572086730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,3 @@\n export default function CommentSection() {\r\n-    return <div>CommentSection</div>;\r\n+    return <div></div>;\r\n }\r\n-\r\n-export default function CommentSection() {\r\n-  return (\r\n-    <div>CommentSection</div>\r\n-  )\r\n-}\r\n"
+                },
+                {
+                    "date": 1724572093335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n+\r\n+\r\n export default function CommentSection() {\r\n-    return <div></div>;\r\n+    return <div>\r\n+\r\n+    </div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1724572103540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+import { useEffect } from \"react\";\r\n \r\n-\r\n export default function CommentSection() {\r\n     return <div>\r\n \r\n     </div>;\r\n"
+                },
+                {
+                    "date": 1724572109977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { useEffect } from \"react\";\r\n+import \r\n \r\n export default function CommentSection() {\r\n     return <div>\r\n \r\n"
+                },
+                {
+                    "date": 1724572118086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useEffect } from \"react\";\r\n-import {useState} from \"\"\r\n+import {useState} from \"r\"\r\n \r\n export default function CommentSection() {\r\n     return <div>\r\n \r\n"
+                },
+                {
+                    "date": 1724572139900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useEffect } from \"react\";\r\n import {useState} from \"react-redux\"\r\n \r\n export default function CommentSection() {\r\n-    const \r\n+    const {}\r\n     return <div>\r\n \r\n     </div>;\r\n }\r\n"
+                }
+            ],
+            "date": 1724571957709,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function CommentSection() {\r\n  return (\r\n    <div>CommentSection</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

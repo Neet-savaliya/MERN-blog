@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/componants/CallToAction.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1723189720331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723189730373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import React from 'react'\r\n \r\n export default function CallToAction() {\r\n   return (\r\n     <div>CallToAction</div>\r\n"
+                },
+                {
+                    "date": 1723189735794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\r\n export default function CallToAction() {\r\n   return (\r\n     <div>CallToAction</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1723189833224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,23 @@\n export default function CallToAction() {\r\n-  return (\r\n-    <div>CallToAction</div>\r\n-  )\r\n-}\r\n+    return (\r\n+        return (\r\n+            <div className='flex flex-col sm:flex-row p-3 border border-teal-500 justify-center items-center rounded-tl-3xl rounded-br-3xl text-center'>\r\n+                <div className=\"flex-1 justify-center flex flex-col\">\r\n+                    <h2 className='text-2xl'>\r\n+                        Want to learn more about JavaScript?\r\n+                    </h2>\r\n+                    <p className='text-gray-500 my-2'>\r\n+                        Checkout these resources with 100 JavaScript Projects\r\n+                    </p>\r\n+                    <Button gradientDuoTone='purpleToPink' className='rounded-tl-xl rounded-bl-none'>\r\n+                        <a href=\"https://www.100jsprojects.com\" target='_blank' rel='noopener noreferrer'>\r\n+                            100 JavaScript Projects\r\n+                        </a>\r\n+                    </Button>\r\n+                </div>\r\n+                <div className=\"p-7 flex-1\">\r\n+                    <img src=\"https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg\" />\r\n+                </div>\r\n+            </div>\r\n+          )\r\n+    )\r\n"
+                },
+                {
+                    "date": 1723189838980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function CallToAction() {\r\n-    return (\r\n+    \r\n         return (\r\n             <div className='flex flex-col sm:flex-row p-3 border border-teal-500 justify-center items-center rounded-tl-3xl rounded-br-3xl text-center'>\r\n                 <div className=\"flex-1 justify-center flex flex-col\">\r\n                     <h2 className='text-2xl'>\r\n"
+                },
+                {
+                    "date": 1723189847715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n                     <img src=\"https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg\" />\r\n                 </div>\r\n             </div>\r\n           )\r\n-    )\r\n+        }\r\n"
+                },
+                {
+                    "date": 1723189856556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import { Button } from \"flowbite-react\";\r\n+\r\n+export default function CallToAction() {\r\n+    return (\r\n+        <div className=\"flex flex-col sm:flex-row p-3 border border-teal-500 justify-center items-center rounded-tl-3xl rounded-br-3xl text-center\">\r\n+            <div className=\"flex-1 justify-center flex flex-col\">\r\n+                <h2 className=\"text-2xl\">\r\n+                    Want to learn more about JavaScript?\r\n+                </h2>\r\n+                <p className=\"text-gray-500 my-2\">\r\n+                    Checkout these resources with 100 JavaScript Projects\r\n+                </p>\r\n+                <Button\r\n+                    gradientDuoTone=\"purpleToPink\"\r\n+                    className=\"rounded-tl-xl rounded-bl-none\"\r\n+                >\r\n+                    <a\r\n+                        href=\"https://www.100jsprojects.com\"\r\n+                        target=\"_blank\"\r\n+                        rel=\"noopener noreferrer\"\r\n+                    >\r\n+                        100 JavaScript Projects\r\n+                    </a>\r\n+                </Button>\r\n+            </div>\r\n+            <div className=\"p-7 flex-1\">\r\n+                <img src=\"https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg\" />\r\n+            </div>\r\n+        </div>\r\n+    );\r\n+}\r\n"
+                }
+            ],
+            "date": 1723189720331,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function CallToAction() {\r\n  return (\r\n    <div>CallToAction</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

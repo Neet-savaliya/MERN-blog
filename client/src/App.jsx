@@ -14,11 +14,13 @@ import CreatePost from "./pages/CreatePost";
 import AdminRouteOnly from "./componants/AdminRouteOnly";
 import UpdatePage from "./pages/UpdatePage";
 import Post from "./pages/Post";
+import ScrollToUp from "./componants/ScrollToUp";
 
 export default function App() {
     return (
         <>
             <BrowserRouter>
+            <ScrollToUp/>
                 <Header></Header>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>

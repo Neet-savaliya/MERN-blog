@@ -14,4 +14,6 @@ Router.post("/sign-out",userCtr.postSignOut);
 
 Router.get("/getUsers",userCtr.getUsers);
 
+Router.get("/:userId",userCtr.getUser)
+
 module.exports = Router;

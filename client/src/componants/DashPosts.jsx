@@ -70,6 +70,8 @@ export default function DashPosts() {
         }
     };
 
+    console.log(currentUser.payload.admin, " ", userPost.length); 
+
     return (
         <div className="table-auto overflow-x-scroll md:mx-auto p-3 scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300 dark:scrollbar-track-slate-700 dark:scrollbar-thumb-slate-500">
             {currentUser.payload.admin && userPost.length > 0 ? (
@@ -122,7 +124,9 @@ export default function DashPosts() {
                                             {post.title}
                                         </Link>
                                     </Table.Cell>
-                                    <Table.Cell key={post.title + post.slug}>{post.category}</Table.Cell>
+                                    <Table.Cell key={post.title + post.slug}>
+                                        {post.category}
+                                    </Table.Cell>
                                     <Table.Cell key={`delete${post._id}`}>
                                         <span
                                             className="font-medium text-red-500 hover:underline cursor-pointer"

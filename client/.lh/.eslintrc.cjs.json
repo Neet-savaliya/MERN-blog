@@ -1,0 +1,22 @@
+{
+    "sourceFile": ".eslintrc.cjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1725020717151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1725020725611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,7 @@\n     'react-refresh/only-export-components': [\n       'warn',\n       { allowConstantExport: true },\n     ],\n-    \"rules\": {\n-  \n-}\n+    \"react/prop-types\": \"off\"\n   },\n }\n"
+                }
+            ],
+            "date": 1725020717151,
+            "name": "Commit-0",
+            "content": "module.exports = {\n  root: true,\n  env: { browser: true, es2020: true },\n  extends: [\n    'eslint:recommended',\n    'plugin:react/recommended',\n    'plugin:react/jsx-runtime',\n    'plugin:react-hooks/recommended',\n  ],\n  ignorePatterns: ['dist', '.eslintrc.cjs'],\n  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },\n  settings: { react: { version: '18.2' } },\n  plugins: ['react-refresh'],\n  rules: {\n    'react/jsx-no-target-blank': 'off',\n    'react-refresh/only-export-components': [\n      'warn',\n      { allowConstantExport: true },\n    ],\n    \"rules\": {\n  \"react/prop-types\": \"off\"\n}\n  },\n}\n"
+        }
+    ]
+}

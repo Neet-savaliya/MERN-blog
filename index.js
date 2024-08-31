@@ -7,7 +7,7 @@ const cors = require("cors");
 const userRoutes = require("./api/routes/user.route");
 const AuthRoutes = require("./api/routes/auth.route");
 const PostRoutes = require("./api/routes/post.route");
-
+const CommentRoutes = require("./api/routes/comment.route");
 dotenv.config();
 
 const app = express();
@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 app.use("/api/user", userRoutes);
 app.use("/api/auth", AuthRoutes);
 app.use("/api/post", PostRoutes);
+app.use("/api/comment", CommentRoutes);
 app.use((error, req, res, next) => {
     const statusCode = error.statusCode || 500;
     const message = error.message || "Internal server error";
