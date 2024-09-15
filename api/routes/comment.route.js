@@ -4,6 +4,9 @@ const commentCtr = require("../controller/comment.controller");
 const router = express.Router();
 
 router.post("/create", commentCtr.createComment);
-router.get("/getPostComment/:postId",commentCtr.getComments )
 
-module.exports =  router;
+router.get("/getPostComment/:postId", commentCtr.getComments);
+
+router.put("/like/:commentId/:userId", commentCtr.likeComment);
+
+module.exports = router;

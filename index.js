@@ -15,7 +15,10 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:5173",
+    credentials:true
+}));
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -23,6 +26,12 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Header", "Content-Type,Authentication");
     next();
 });
+
+// app.use((req, res, next) => {
+//     req.cookies.name = "Neet";
+//     next();
+// });
+
 
 app.use("/api/user", userRoutes);
 app.use("/api/auth", AuthRoutes);

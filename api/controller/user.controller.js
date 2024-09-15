@@ -116,7 +116,6 @@ exports.getUser = async (req, res, next) => {
     const userId = req.params.userId;
     try {
         const user = await User.findById(userId);
-        console.log(user);
         const { password, ...rest } = user._doc;
         if (user) {
             res.status(200).json(rest);

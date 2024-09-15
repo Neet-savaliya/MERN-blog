@@ -1,8 +1,11 @@
 import moment from "moment/moment";
 import { useEffect, useState } from "react";
+import { FaThumbsUp } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
-export default function Comment({ comment }) {
+export default function Comment({ comment, onLike }) {
     const [user, setUser] = useState({});
+    const { currentUser } = useSelector((state) => state.user);
 
     useEffect(() => {
         // console.log(comment);
@@ -14,7 +17,7 @@ export default function Comment({ comment }) {
 
                 if (res.ok) {
                     setUser(fetchedUser);
-                    console.log(fetchedUser);
+                    // console.log(fetchedUser);
                     // console.log("user  ",user);
                 } else {
                     console.log(res.message);
@@ -27,7 +30,7 @@ export default function Comment({ comment }) {
         }
     }, [comment]);
 
-    console.log(user);
+    // console.log(user);
 
     return (
         user && (
@@ -51,10 +54,33 @@ export default function Comment({ comment }) {
                         </span>
                     </div>
                     <p className="text-gray-500 pb-2">{comment.content}</p>
+                    <div className="flex pt-3 gap-2 text-xs border-t dark:border-gray-700 max-w-fit">
+                        <button
+                            className={`text-gray-500 ${
+                                currentUser.payload &&
+                                comment.likes.includes(
+                                    currentUser.payload._id
+                                ) &&
+                                "!text-blue-500"
+                            }`}
+                            type="button"
+                            onClick={() => {
+                                onLike(comment._id);
+                            }}
+                        >
+                            <FaThumbsUp className="text-sm" />
+                        </button>
+                        <p className="text-gray-400 ">
+                            {comment.numberOfLikes > 0 &&
+                                comment.numberOfLikes +
+                                    " " +
+                                    (comment.numberOfLikes === 1
+                                        ? "like"
+                                        : "likes")}
+                        </p>
+                    </div>
                 </div>
             </div>
         )
-
-        // <></>
     );
 }

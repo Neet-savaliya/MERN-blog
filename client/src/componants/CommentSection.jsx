@@ -1,7 +1,7 @@
 import { Button, Textarea } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Comment from "./Comment";
 
 // eslint-disable-next-line react/prop-types
@@ -9,6 +9,7 @@ export default function CommentSection({ postId }) {
     const { currentUser } = useSelector((state) => state.user);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
+    const navigate = useNavigate();
 
     const submitComment = async (e) => {
         e.preventDefault();
@@ -55,6 +56,40 @@ export default function CommentSection({ postId }) {
             console.log(error);
         }
     }, [postId]);
+
+    const handleLikes = async (commentId) => {
+        if (!currentUser.payload) {
+            navigate("/sign-in");
+            return;
+        }
+        try {
+            const res = await fetch(
+                `http://localhost:5173/api/comment/like/${commentId}/${currentUser.payload._id}`,
+                {
+                    method: "PUT",
+                }
+            );
+
+            if (res.ok) {
+                const data = await res.json();
+
+                setComments(
+                    comments.map((comment) => {
+                        return comment._id === commentId
+                            ? {
+                                  ...comment,
+                                  likes: data.likes,
+                                  numberOfLikes: data.likes.length,
+                              }
+                            : comment;
+                    })
+                );
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+    };
 
     return (
         <div>
@@ -124,9 +159,15 @@ export default function CommentSection({ postId }) {
                             <p>{comments.length}</p>
                         </div>
                     </div>
-                    {comments.map((comment) => (
-                        <Comment key={comment._id} comment={comment} />
-                    ))}
+                    {comments.map((comment) => {
+                        return (
+                            <Comment
+                                key={comment._id}
+                                comment={comment}
+                                onLike={handleLikes}
+                            />
+                        );
+                    })}
                 </>
             )}
         </div>

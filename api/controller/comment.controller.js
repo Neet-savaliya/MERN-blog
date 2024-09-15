@@ -30,6 +30,37 @@ exports.getComments = async (req, res, next) => {
             res.status(200).json(comments);
         }
     } catch (error) {
-        console.log(error);
+        next(error);
+    }
+};
+
+exports.likeComment = async (req, res, next) => {
+    try {
+        const commentId = req.params.commentId;
+        const userId = req.params.userId;
+
+        console.log("commentId :", commentId);
+        console.log("userId :", userId);
+
+        const comment = await Comment.findById(commentId);
+        console.log("comment :", comment);
+        if (!comment) {
+            return next(customError(404, "Comment not found"));
+        }
+        const userIndex = comment.likes.indexOf(userId);
+        console.log("userIndex :", userIndex);
+        if (userIndex === -1) {
+            comment.numberOfLikes = comment.numberOfLikes + 1;
+            comment.likes.push(userId);
+        } else {
+            comment.numberOfLikes = comment.numberOfLikes - 1;
+            comment.likes.splice(userIndex, 1);
+        }
+        const response = await comment.save();
+        console.log("response :", response);
+
+        res.status(200).json(comment);
+    } catch (error) {
+        next(error);
     }
 };
