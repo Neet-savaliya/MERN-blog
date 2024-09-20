@@ -9,4 +9,8 @@ router.get("/getPostComment/:postId", commentCtr.getComments);
 
 router.put("/like/:commentId/:userId", commentCtr.likeComment);
 
+router.post("/edit/:commentId/:userId", commentCtr.editComment);
+
+router.delete("/delete/:commentId/:userId",commentCtr.deleteComment)
+
 module.exports = router;

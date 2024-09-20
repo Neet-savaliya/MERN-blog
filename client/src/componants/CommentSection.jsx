@@ -1,14 +1,23 @@
-import { Button, Textarea } from "flowbite-react";
+import {
+    Button,
+    Modal,
+    ModalBody,
+    ModalHeader,
+    Textarea,
+} from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Comment from "./Comment";
+import { HiOutlineExclamationCircle } from "react-icons/hi2";
 
 // eslint-disable-next-line react/prop-types
 export default function CommentSection({ postId }) {
     const { currentUser } = useSelector((state) => state.user);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
+    const [showModel, setShowModel] = useState(false);
+    const [childComment, setChildComment] = useState(null);
     const navigate = useNavigate();
 
     const submitComment = async (e) => {
@@ -17,18 +26,15 @@ export default function CommentSection({ postId }) {
             return;
         }
         try {
-            const res = await fetch(
-                "http://localhost:3000/api/comment/create",
-                {
-                    method: "post",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        content: comment,
-                        userId: currentUser.payload._id,
-                        postId: postId,
-                    }),
-                }
-            );
+            const res = await fetch("/api/comment/create", {
+                method: "post",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    content: comment,
+                    userId: currentUser.payload._id,
+                    postId: postId,
+                }),
+            });
             const data = await res.json();
             if (res.ok) {
                 setComment("");
@@ -64,7 +70,7 @@ export default function CommentSection({ postId }) {
         }
         try {
             const res = await fetch(
-                `http://localhost:5173/api/comment/like/${commentId}/${currentUser.payload._id}`,
+                `/api/comment/like/${commentId}/${currentUser.payload._id}`,
                 {
                     method: "PUT",
                 }
@@ -88,7 +94,66 @@ export default function CommentSection({ postId }) {
         } catch (error) {
             console.log(error);
         }
+    };
 
+    const onSaveEdited = async (commentContent, childComment) => {
+        try {
+            const isAdmin = currentUser.payload.admin;
+            const res = await fetch(
+                `/api/comment/edit/${childComment._id}/${currentUser.payload._id}`,
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ content: commentContent, isAdmin }),
+                }
+            );
+
+            if (!res.ok) {
+                throw new Error("Not getting response");
+            }
+            const data = await res.json();
+            console.log(data);
+            setComments((prev) => {
+                return prev.map((comment) => {
+                    if (comment._id === data._id) {
+                        return { ...comment, content: commentContent };
+                    } else {
+                        return comment;
+                    }
+                });
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const onDelete = async (childCommentArg) => {
+        console.log(childCommentArg);
+        try {
+            const isAdmin = currentUser.payload.admin;
+
+            if (!childCommentArg.userId === currentUser.payload._id && !currentUser.payload.admin) {
+                return;
+            }
+            const res = await fetch(
+                `/api/comment/delete/${childCommentArg._id}/${currentUser.payload._id}`,
+                {
+                    method: "delete",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ isAdmin }),
+                }
+            );
+            if (!res.ok) {
+                throw new Error("Not deleted.");
+            }
+            const data = await res.json();
+            setComments((prev) => {
+                return prev.filter((comment) => comment._id !== data._id);
+            });
+            setShowModel(false)
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -165,11 +230,51 @@ export default function CommentSection({ postId }) {
                                 key={comment._id}
                                 comment={comment}
                                 onLike={handleLikes}
+                                onSave={onSaveEdited}
+                                onDelete={(comment) => {
+                                    setShowModel(true);
+                                    setChildComment(comment)
+                                }}
                             />
                         );
                     })}
                 </>
             )}
+            <Modal
+                show={showModel}
+                onClose={() => {
+                    setShowModel(false);
+                }}
+                size="md"
+                popup
+            >
+                <ModalHeader />
+                <ModalBody>
+                    <div className="text-center">
+                        <HiOutlineExclamationCircle className="h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto" />
+                        <h3 className="mb-5 text-lg text-gray-500 dark:text-gray-400">
+                            Are you sure you want to delete your comment?
+                        </h3>
+                        <div className="flex justify-center gap-4">
+                            {console.log(childComment)}
+                            <Button
+                                color="failure"
+                                onClick={() => onDelete(childComment)}
+                            >
+                                yes,Delete
+                            </Button>
+                            <Button
+                                color="gray"
+                                onClick={() => {
+                                    setShowModel(false);
+                                }}
+                            >
+                                No,cancel
+                            </Button>
+                        </div>
+                    </div>
+                </ModalBody>
+            </Modal>
         </div>
     );
 }
