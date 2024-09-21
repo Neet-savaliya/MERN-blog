@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/Project.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1726891243062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726891252309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import CallToAction from '../components/CallToAction';\r\n+import CallToAction from '../componants/CallToAction';\r\n \r\n export default function Projects() {\r\n   return (\r\n     <div className='min-h-screen max-w-2xl mx-auto flex justify-center items-center flex-col gap-6 p-3'>\r\n"
+                }
+            ],
+            "date": 1726891243062,
+            "name": "Commit-0",
+            "content": "import CallToAction from '../components/CallToAction';\r\n\r\nexport default function Projects() {\r\n  return (\r\n    <div className='min-h-screen max-w-2xl mx-auto flex justify-center items-center flex-col gap-6 p-3'>\r\n      <h1 className='text-3xl font-semibold'>Pojects</h1>\r\n      <p className='text-md text-gray-500'>Build fun and engaging projects while learning HTML, CSS, and JavaScript!</p>\r\n      <CallToAction />\r\n    </div>\r\n  )\r\n}"
+        }
+    ]
+}
