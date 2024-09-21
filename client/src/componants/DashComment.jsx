@@ -16,10 +16,10 @@ export default function DashComments() {
             });
             const data = await res.json();
             if (res.ok) {
-                if (data.comments.length <= 9) {
+                if (data.comment.length <= 9) {
                     setShowMore(false);
                 }
-                setComments(data.comments);
+                setComments(data.comment);
             }
         };
 
@@ -32,7 +32,7 @@ export default function DashComments() {
         const startIndex = comments.length;
         try {
             const res = await fetch(
-                `/api/user/getUsers&startIndex=${startIndex}`
+                `/api/user/getComments&startIndex=${startIndex}`
             );
 
             const data = await res.json();

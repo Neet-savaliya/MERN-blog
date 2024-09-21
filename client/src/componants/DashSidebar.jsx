@@ -9,7 +9,7 @@ import {
 import { FaArrowRight, FaUser } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { signOutSuccess } from "../redux/user/userSlice";
-import { HiDocumentText, HiUserGroup } from "react-icons/hi2";
+import { HiChatBubbleBottomCenterText, HiDocumentText, HiUserGroup } from "react-icons/hi2";
 import { useSelector } from "react-redux";
 
 export default function DashSidebar() {
@@ -64,6 +64,19 @@ export default function DashSidebar() {
                                 as="div"
                             >
                                 Posts
+                            </SidebarItem>
+                        </Link>
+                    )}
+
+{currentUser.payload.admin && (
+                        <Link to="/dashboard?tab=comments">
+                            <SidebarItem
+                                icon={HiChatBubbleBottomCenterText}
+                                active={tab === "comments"}
+                                labelColor="dark"
+                                as="div"
+                            >
+                                Comments
                             </SidebarItem>
                         </Link>
                     )}
