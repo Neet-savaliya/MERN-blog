@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/componants/DashPannle.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1726917071487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726917078133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState, useEffect } from \"react\";\r\n import { useSelector } from \"react-redux\";\r\n \r\n-export default function DashPannle() {\r\n+export default function dashP() {\r\n     const [user, setUser] = useState({});\r\n     const [comment, setCOmment] = useState({});\r\n     const [posts, setPosts] = useState({});\r\n     const [totalPost, setTotalPost] = useState(0);\r\n"
+                },
+                {
+                    "date": 1726917087554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState, useEffect } from \"react\";\r\n import { useSelector } from \"react-redux\";\r\n \r\n-export default function dashPanle() {\r\n+export default function dashPannel() {\r\n     const [user, setUser] = useState({});\r\n     const [comment, setCOmment] = useState({});\r\n     const [posts, setPosts] = useState({});\r\n     const [totalPost, setTotalPost] = useState(0);\r\n"
+                }
+            ],
+            "date": 1726917071487,
+            "name": "Commit-0",
+            "content": "import { useState, useEffect } from \"react\";\r\nimport { useSelector } from \"react-redux\";\r\n\r\nexport default function DashPannle() {\r\n    const [user, setUser] = useState({});\r\n    const [comment, setCOmment] = useState({});\r\n    const [posts, setPosts] = useState({});\r\n    const [totalPost, setTotalPost] = useState(0);\r\n    const [totalComment, setTotalComment] = useState(0);\r\n    const [totalUser, setTotalUser] = useState(0);\r\n    const [recentPost, setRecentPosts] = useState({});\r\n    const [recentComment, setRecentComment] = useState({});\r\n    const [recentUser, setRecentUsers] = useState({});\r\n    const { currentUser } = useSelector((state) => state.user);\r\n\r\n    useEffect(() => {\r\n        const fetchUsers = async () => {\r\n            const res = await fetch(\"/api/user/getUser\");\r\n            if(res.ok){\r\n                const data = await res.json();\r\n                // setUser(data.user)\r\n            }\r\n        };\r\n        const fetchComments = async () => {\r\n            const res = await fetch(\"/api/comment/getComment\");\r\n            if(res.ok){\r\n                const data = await res.json();\r\n                // setUser(data.user)\r\n            }\r\n        };\r\n        const fetchPosts = async () => {\r\n            const res = await fetch(\"/api/post/posts\");\r\n            if(res.ok){\r\n                const data = await res.json();\r\n                // setUser(data.user)\r\n            }\r\n        };\r\n    }, [currentUser.payload]);\r\n\r\n    return <div></div>;\r\n}\r\n"
+        }
+    ]
+}

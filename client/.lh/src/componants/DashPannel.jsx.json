@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/componants/DashPannel.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1726916503447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726916508735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n export default function DashPannel() {\r\n-  return (\r\n-    <div>DashPannel</div>\r\n-  )\r\n+    return <div>DashPannel</div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1726916514045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export default function DashPannel() {\r\n+\r\n+\r\n+\r\n+    \r\n+    return <div>DashPannel</div>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1726916519408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,7 @@\n export default function DashPannel() {\r\n+    \r\n \r\n \r\n \r\n-    \r\n     return <div>DashPannel</div>;\r\n }\r\n-import React from 'react'\r\n-\r\n-export default function DashPannel() {\r\n-    return <div>DashPannel</div>;\r\n-}\r\n"
+                },
+                {
+                    "date": 1726916525916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const \r\n+\r\n+export default function DashPannel() {\r\n+    \r\n+\r\n+\r\n+\r\n+    return <div>DashPannel</div>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1726916544636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const \r\n+import \r\n \r\n export default function DashPannel() {\r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1726916551180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n \r\n \r\n \r\n     return <div>DashPannel</div>;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1726916559937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useState } from \"react\";\r\n+import { useSelector } from \"react-redux\";\r\n+\r\n+export default function DashPannel() {\r\n+    \r\n+\r\n+\r\n+\r\n+    return <div>DashPannel</div>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1726916567355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useState } from \"react\";\r\n+import { useState, useEffect } from \"react\";\r\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPannel() {\r\n     \r\n"
+                },
+                {
+                    "date": 1726916572978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useState, useEffect } from \"react\";\r\n+import { useSelector } from \"react-redux\";\r\n+\r\n+export default function DashPannel() {\r\n+    const \r\n+\r\n+\r\n+\r\n+    return <div>DashPannel</div>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1726916578776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState, useEffect } from \"react\";\r\n import { useSelector } from \"react-redux\";\r\n \r\n export default function DashPannel() {\r\n-    const [user]\r\n+    const [user, setUser]\r\n \r\n \r\n \r\n     return <div>DashPannel</div>;\r\n"
+                },
+                {
+                    "date": 1726916584267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { useState, useEffect } from \"react\";\r\n+import { useSelector } from \"react-redux\";\r\n+\r\n+export default function DashPannel() {\r\n+    const [user, setUser] = useState({})\r\n+\r\n+\r\n+\r\n+    return <div>DashPannel</div>;\r\n+}\r\n"
+                }
+            ],
+            "date": 1726916503447,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport default function DashPannel() {\r\n  return (\r\n    <div>DashPannel</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}
