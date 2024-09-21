@@ -40,7 +40,6 @@ export default function CommentSection({ postId }) {
                 setComment("");
                 setComments([data, ...comments]);
             }
-            console.log(data);
         } catch (error) {
             console.log(error);
         }
@@ -112,7 +111,6 @@ export default function CommentSection({ postId }) {
                 throw new Error("Not getting response");
             }
             const data = await res.json();
-            console.log(data);
             setComments((prev) => {
                 return prev.map((comment) => {
                     if (comment._id === data._id) {
@@ -128,7 +126,6 @@ export default function CommentSection({ postId }) {
     };
 
     const onDelete = async (childCommentArg) => {
-        console.log(childCommentArg);
         try {
             const isAdmin = currentUser.payload.admin;
 
@@ -256,7 +253,6 @@ export default function CommentSection({ postId }) {
                             Are you sure you want to delete your comment?
                         </h3>
                         <div className="flex justify-center gap-4">
-                            {console.log(childComment)}
                             <Button
                                 color="failure"
                                 onClick={() => onDelete(childComment)}
