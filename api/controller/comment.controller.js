@@ -22,7 +22,7 @@ exports.createComment = async (req, res, next) => {
     }
 };
 
-exports.getComments = async (req, res, next) => {
+exports.getPostComments = async (req, res, next) => {
     const postId = req.params.postId;
     try {
         const comments = await Comment.find({ postId: postId });
@@ -105,4 +105,19 @@ exports.deleteComment = async(req, res, next) => {
     } catch (error) {
         next(error)
     }
+}
+
+exports.getComment = async(req, res, next) => {
+    try {
+        const limit = req.query.limit || 9;
+        const sortDir = req.query.sortdirection === "acs" ? 1 : -1;
+        const startIndex = req.query.skip || 0;
+        
+        const comment = await Comment.find().skip(startIndex).limit(limit).sort({ updatedAt: sortDir })
+        console.log(comment);
+        res.status(200).json(comment)
+    } catch (error) {
+        next(error)
+    }
+    
 }

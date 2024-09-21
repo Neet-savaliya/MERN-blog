@@ -5,7 +5,9 @@ const router = express.Router();
 
 router.post("/create", commentCtr.createComment);
 
-router.get("/getPostComment/:postId", commentCtr.getComments);
+router.get("/getPostComment/:postId", commentCtr.getPostComments);
+
+router.get("/getComment",commentCtr.getComment)
 
 router.put("/like/:commentId/:userId", commentCtr.likeComment);
 
