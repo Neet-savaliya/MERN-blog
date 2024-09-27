@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 35,
+            "activePatchIndex": 37,
             "patches": [
                 {
                     "date": 1726891725591,
@@ -148,6 +148,14 @@
                 {
                     "date": 1727415206558,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,77 +54,12 @@\n     res.status(statusCode).json({ success: \"false\", statusCode, message });\r\n });\r\n \r\n mongoose\r\n-    .connect(\"mongodb+srv://node_complete:2801@cluster0.5zm0eog.mongodb.net/mern-blog\")\r\n+    .connect(MONMG)\r\n     .then((result) => {\r\n         app.listen(3000, () => {\r\n             console.log(\"running on 3000\");\r\n \r\n         });\r\n     })\r\n     .catch((err) => console.log(err));\r\n-const bodyParser = require(\"body-parser\");\r\n-const express = require(\"express\");\r\n-const mongoose = require(\"mongoose\");\r\n-const dotenv = require(\"dotenv\");\r\n-const cookieParser = require(\"cookie-parser\");\r\n-const cors = require(\"cors\");\r\n-const userRoutes = require(\"./routes/user.route\");\r\n-const AuthRoutes = require(\"./routes/auth.route\");\r\n-const PostRoutes = require(\"./routes/post.route\");\r\n-const CommentRoutes = require(\"./routes/comment.route\");\r\n-const path = require(\"path\")\r\n-dotenv.config();\r\n-\r\n-__dirname = path.resolve()\r\n-console.log(__dirname);\r\n-\r\n-const MONGO_URL = .process.DATABASE_CONNECTION\r\n-console.log(MONGO_URL);\r\n-\r\n-const app = express();\r\n-\r\n-app.use(express.json());\r\n-app.use(bodyParser.urlencoded({ extended: true }));\r\n-app.use(cookieParser());\r\n-app.use(cors());\r\n-\r\n-app.use((req, res, next) => {\r\n-    res.setHeader(\"Access-Control-Allow-Origin\", \"*\");\r\n-    res.setHeader(\"Access-Control-Allow-Method\", \"POST,GET,PUT,DELETE,PATCH\");\r\n-    res.setHeader(\"Access-Control-Allow-Header\", \"Content-Type,Authentication\");\r\n-    next();\r\n-});\r\n-\r\n-// app.use((req, res, next) => {\r\n-//     req.cookies.name = \"Neet\";\r\n-//     next();\r\n-// });\r\n-\r\n-\r\n-app.use(\"/api/user\", userRoutes);\r\n-app.use(\"/api/auth\", AuthRoutes);\r\n-app.use(\"/api/post\", PostRoutes);\r\n-app.use(\"/api/comment\", CommentRoutes);\r\n-\r\n-app.use(express.static(path.join(__dirname, '/client/dist')));\r\n-\r\n-app.get('*', (req, res) => {\r\n-    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));\r\n-  });\r\n-\r\n-app.use((error, req, res, next) => {\r\n-    const statusCode = error.statusCode || 500;\r\n-    const message = error.message || \"Internal server error\";\r\n-    res.status(statusCode).json({ success: \"false\", statusCode, message });\r\n-});\r\n-\r\n-mongoose\r\n-    .connect(\"mongodb+srv://node_complete:2801@cluster0.5zm0eog.mongodb.net/mern-blog\")\r\n-    .then((result) => {\r\n-        app.listen(3000, () => {\r\n-            console.log(\"running on 3000\");\r\n-\r\n-        });\r\n-    })\r\n-    .catch((err) => console.log(err));\r\n"
+                },
+                {
+                    "date": 1727415693177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n dotenv.config();\r\n \r\n __dirname = path.resolve()\r\n console.log(__dirname);\r\n-\r\n const MONGO_URL = process.env.DATABASE_CONNECTION\r\n console.log(MONGO_URL);\r\n \r\n const app = express();\r\n@@ -54,9 +53,9 @@\n     res.status(statusCode).json({ success: \"false\", statusCode, message });\r\n });\r\n \r\n mongoose\r\n-    .connect(MONMG)\r\n+    .connect(MONGO_URL)\r\n     .then((result) => {\r\n         app.listen(3000, () => {\r\n             console.log(\"running on 3000\");\r\n \r\n"
+                },
+                {
+                    "date": 1727415699461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,10 @@\n const path = require(\"path\")\r\n dotenv.config();\r\n \r\n __dirname = path.resolve()\r\n-console.log(__dirname);\r\n+\r\n const MONGO_URL = process.env.DATABASE_CONNECTION\r\n-console.log(MONGO_URL);\r\n \r\n const app = express();\r\n \r\n app.use(express.json());\r\n"
                 }
             ],
             "date": 1726891725591,

@@ -12,10 +12,8 @@ const path = require("path")
 dotenv.config();
 
 __dirname = path.resolve()
-console.log(__dirname);
 
 const MONGO_URL = process.env.DATABASE_CONNECTION
-console.log(MONGO_URL);
 
 const app = express();
 
