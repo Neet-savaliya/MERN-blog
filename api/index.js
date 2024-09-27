@@ -14,6 +14,9 @@ dotenv.config();
 __dirname = path.resolve()
 console.log(__dirname);
 
+const MONGO_URL = process.env.DATABASE_CONNECTION
+console.log(MONGO_URL);
+
 const app = express();
 
 app.use(express.json());
@@ -52,7 +55,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-    .connect("mongodb+srv://node_complete:2801@cluster0.5zm0eog.mongodb.net/mern-blog")
+    .connect(MONGO_URL)
     .then((result) => {
         app.listen(3000, () => {
             console.log("running on 3000");
