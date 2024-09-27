@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1719739894940,
@@ -28,6 +28,10 @@
                 {
                     "date": 1726891622196,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     \"version\": \"1.0.0\",\n     \"main\": \"index.js\",\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n-        \"build\":\"npm install && npm install --prifix client\"\n+        \"build\":\"npm install && npm install --prifix client \"\n     },\n     \"dependencies\": {\n         \"appmap-node\": \"^2.23.0\",\n         \"bcryptjs\": \"^2.4.3\",\n"
+                },
+                {
+                    "date": 1727412651781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+{\n+    \"name\": \"mern-blog\",\n+    \"version\": \"1.0.0\",\n+    \"main\": \"index.js\",\n+    \"scripts\": {\n+        \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n+        \"start\":\"nodemon ./index.js\",\n+        \"dev\":\"nodemon api/index.js\",\n+        \"build\":\"npm install && npm install --prefix client && npm run dev --prefix client && nodemon ./index.js --prefix api\"\n+    },\n+    \"dependencies\": {\n+        \"appmap-node\": \"^2.23.0\",\n+        \"bcryptjs\": \"^2.4.3\",\n+        \"body-parser\": \"^1.20.2\",\n+        \"cookie-parser\": \"^1.4.6\",\n+        \"cors\": \"^2.8.5\",\n+        \"dotenv\": \"^16.4.5\",\n+        \"express\": \"^4.19.2\",\n+        \"jsonwebtoken\": \"^9.0.2\",\n+        \"mongoose\": \"^8.3.1\",\n+        \"node\": \"^18.20.2\"\n+    },\n+    \"author\": \"\",\n+    \"license\": \"ISC\",\n+    \"description\": \"\"\n+}\n"
                 }
             ],
             "date": 1719739894940,

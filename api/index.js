@@ -11,6 +11,9 @@ const CommentRoutes = require("./routes/comment.route");
 const path = require("path")
 dotenv.config();
 
+__dirname = path.resolve()
+console.log(__dirname);
+
 const app = express();
 
 app.use(express.json());
@@ -53,6 +56,7 @@ mongoose
     .then((result) => {
         app.listen(3000, () => {
             console.log("running on 3000");
+
         });
     })
     .catch((err) => console.log(err));

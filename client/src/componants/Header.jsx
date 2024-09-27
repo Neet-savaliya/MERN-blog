@@ -1,6 +1,6 @@
 //eslint-disable-next-line
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
     Avatar,
     Button,
@@ -20,24 +20,43 @@ import { signOutSuccess } from "../redux/user/userSlice";
 
 export default function Header() {
     const path = useLocation().pathname;
+    const location = useLocation();
     const dispatch = useDispatch();
     const { currentUser } = useSelector((state) => state.user);
     const { theme } = useSelector((state) => state.theme);
+    const [searchTerm, setSearchTerm] = useState(null);
+    const navigate = useNavigate();
 
-    const handleSignOut = async() => {
+    const handleSignOut = async () => {
         try {
             const res = await fetch("http://localhost:3000/api/user/sign-out", {
                 method: "POST",
             });
             const data = await res.json();
-            if(!res.ok){
+            if (!res.ok) {
                 console.log(data.message);
-            }else{
+            } else {
                 dispatch(signOutSuccess());
             }
         } catch (error) {
             console.log(error);
         }
+    };
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(location.search);
+        const searchTermFromUrl = urlParams.get("searchTerm");
+        if (searchTermFromUrl) {
+            setSearchTerm(searchTermFromUrl);
+        }
+    }, [searchTerm, location]); 
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const urlParams = new URLSearchParams(location.search);
+        urlParams.set("searchTerm", searchTerm);
+        const searchQuery = urlParams.toString()
+        navigate(`/search?${searchQuery}`)
     };
 
     return (
@@ -48,12 +67,14 @@ export default function Header() {
                 </span>
                 Blog
             </Link>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <TextInput
                     type="text"
                     rightIcon={AiOutlineSearch}
                     placeholder="Search..."
                     className="hidden lg:inline"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </form>
             <Button className="w-12 h-10 lg:hidden" color="gray" pill>
@@ -94,7 +115,9 @@ export default function Header() {
                         </Link>
                         <DropdownDivider />
                         <Link to="sign-in">
-                            <DropdownItem onClick={handleSignOut}>Sign out</DropdownItem>
+                            <DropdownItem onClick={handleSignOut}>
+                                Sign out
+                            </DropdownItem>
                         </Link>
                     </Dropdown>
                 ) : (
@@ -106,13 +129,19 @@ export default function Header() {
             </div>
             <NavbarCollapse>
                 <Navbar.Link active={path === "/"} as={"div"}>
-                    <Link to="/" className="w-full block">Home</Link>
+                    <Link to="/" className="w-full block">
+                        Home
+                    </Link>
                 </Navbar.Link>
                 <Navbar.Link active={path === "/about"} as={"div"}>
-                    <Link to="/about" className="w-full block">About</Link>
+                    <Link to="/about" className="w-full block">
+                        About
+                    </Link>
                 </Navbar.Link>
                 <Navbar.Link active={path === "/project"} as={"div"}>
-                    <Link to="/project" className="w-full block">Project</Link>
+                    <Link to="/project" className="w-full block">
+                        Project
+                    </Link>
                 </Navbar.Link>
             </NavbarCollapse>
         </Navbar>

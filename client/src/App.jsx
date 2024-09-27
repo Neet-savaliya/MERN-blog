@@ -15,6 +15,7 @@ import AdminRouteOnly from "./componants/AdminRouteOnly";
 import UpdatePage from "./pages/UpdatePage";
 import Post from "./pages/Post";
 import ScrollToUp from "./componants/ScrollToUp";
+import Search from "./pages/Search";
 
 export default function App() {
     return (
@@ -34,6 +35,7 @@ export default function App() {
                     <Route path="/project" element={<Project />}></Route>
                     <Route path="/sign-in" element={<SignIn />}></Route>
                     <Route path="/sign-up" element={<SignUp />}></Route>
+                    <Route path="/search" element={<Search />}></Route>
                     <Route element={<AdminRouteOnly />}>
                         <Route
                             path="/create-post"
