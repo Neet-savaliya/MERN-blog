@@ -1,6 +1,6 @@
 //eslint-disable-next-line
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, redirect, useLocation, useNavigate } from "react-router-dom";
 import {
     Avatar,
     Button,
@@ -121,9 +121,11 @@ export default function Header() {
                         </Link>
                     </Dropdown>
                 ) : (
-                    <Button className="" gradientDuoTone="purpleToBlue" outline>
+                    <Link to='sign-in'>
+                    <Button className="" gradientDuoTone="purpleToBlue" outline >
                         SignIn
                     </Button>
+                    </Link>
                 )}
                 <Navbar.Toggle />
             </div>
