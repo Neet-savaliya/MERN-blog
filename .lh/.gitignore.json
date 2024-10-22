@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1713024506748,
@@ -36,6 +36,14 @@
                 {
                     "date": 1727416506946,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,4 @@\n \n .env\n practice.js\n \n-/client/src/firebase.js\n"
+                },
+                {
+                    "date": 1729589452453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n *.njsproj\n *.sln\n *.sw?\n \n-.env\n+# .env\n practice.js\n \n"
+                },
+                {
+                    "date": 1729589600971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n *.njsproj\n *.sln\n *.sw?\n \n-# .env\n+.env\n practice.js\n \n"
                 }
             ],
             "date": 1713024506748,

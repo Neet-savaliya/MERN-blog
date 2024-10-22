@@ -1,14 +1,15 @@
 // Import the functions you need from the SDKs you need
-import { configDotenv } from "dotenv";
 import { initializeApp } from "firebase/app";
-configDotenv()
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 
+const apikey = import.meta.env.VITE_GOOGLE_API_KEY
+// console.log("apikey", import.meta.env);
+
 const firebaseConfig = {
-    apiKey:import.meta.env.VITE_GOOGLE_APIKEY,
+    apiKey:apikey,
     authDomain: "mern-blog-1b6fe.firebaseapp.com",
     projectId: "mern-blog-1b6fe",
     storageBucket: "mern-blog-1b6fe.appspot.com",
